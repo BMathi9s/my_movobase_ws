@@ -1,0 +1,382 @@
+[0.107s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'movo_description', '--symlink-install']
+[0.107s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['movo_description'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x76b62d162140>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x76b62d11c400>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x76b62d11c400>>)
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.287s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/movo_base/movobase_ws/src'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(backward_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(backward_ros) by extension 'ignore'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(backward_ros) by extension 'ignore_ament_install'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(backward_ros) by extensions ['colcon_pkg']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(backward_ros) by extension 'colcon_pkg'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(backward_ros) by extensions ['colcon_meta']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(backward_ros) by extension 'colcon_meta'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(backward_ros) by extensions ['ros']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(backward_ros) by extension 'ros'
+[0.301s] DEBUG:colcon.colcon_core.package_identification:Package 'backward_ros' with type 'ros.cmake' and name 'backward_ros'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(joy_to_twist) by extensions ['ignore', 'ignore_ament_install']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(joy_to_twist) by extension 'ignore'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(joy_to_twist) by extension 'ignore_ament_install'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(joy_to_twist) by extensions ['colcon_pkg']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(joy_to_twist) by extension 'colcon_pkg'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(joy_to_twist) by extensions ['colcon_meta']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(joy_to_twist) by extension 'colcon_meta'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(joy_to_twist) by extensions ['ros']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(joy_to_twist) by extension 'ros'
+[0.302s] DEBUG:colcon.colcon_core.package_identification:Package 'joy_to_twist' with type 'ros.ament_python' and name 'joy_to_twist'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(movo_base_motor_control) by extensions ['ignore', 'ignore_ament_install']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(movo_base_motor_control) by extension 'ignore'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(movo_base_motor_control) by extension 'ignore_ament_install'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(movo_base_motor_control) by extensions ['colcon_pkg']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(movo_base_motor_control) by extension 'colcon_pkg'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(movo_base_motor_control) by extensions ['colcon_meta']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(movo_base_motor_control) by extension 'colcon_meta'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(movo_base_motor_control) by extensions ['ros']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(movo_base_motor_control) by extension 'ros'
+[0.303s] DEBUG:colcon.colcon_core.package_identification:Package 'movo_base_motor_control' with type 'ros.ament_python' and name 'movo_base_motor_control'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(movo_description) by extensions ['ignore', 'ignore_ament_install']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(movo_description) by extension 'ignore'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(movo_description) by extension 'ignore_ament_install'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(movo_description) by extensions ['colcon_pkg']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(movo_description) by extension 'colcon_pkg'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(movo_description) by extensions ['colcon_meta']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(movo_description) by extension 'colcon_meta'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(movo_description) by extensions ['ros']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(movo_description) by extension 'ros'
+[0.304s] DEBUG:colcon.colcon_core.package_identification:Package 'movo_description' with type 'ros.ament_cmake' and name 'movo_description'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample) by extensions ['ignore', 'ignore_ament_install']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample) by extension 'ignore'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample) by extension 'ignore_ament_install'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample) by extensions ['colcon_pkg']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample) by extension 'colcon_pkg'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample) by extensions ['colcon_meta']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample) by extension 'colcon_meta'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample) by extensions ['ros']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample) by extension 'ros'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample) by extensions ['cmake', 'python']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample) by extension 'cmake'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample) by extension 'python'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample) by extensions ['python_setup_py']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample) by extension 'python_setup_py'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control) by extensions ['ignore', 'ignore_ament_install']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control) by extension 'ignore'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control) by extension 'ignore_ament_install'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control) by extensions ['colcon_pkg']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control) by extension 'colcon_pkg'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control) by extensions ['colcon_meta']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control) by extension 'colcon_meta'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control) by extensions ['ros']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control) by extension 'ros'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control) by extensions ['cmake', 'python']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control) by extension 'cmake'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control) by extension 'python'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control) by extensions ['python_setup_py']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control) by extension 'python_setup_py'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/Dockerfile) by extensions ['ignore', 'ignore_ament_install']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/Dockerfile) by extension 'ignore'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/Dockerfile) by extension 'ignore_ament_install'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/Dockerfile) by extensions ['colcon_pkg']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/Dockerfile) by extension 'colcon_pkg'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/Dockerfile) by extensions ['colcon_meta']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/Dockerfile) by extension 'colcon_meta'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/Dockerfile) by extensions ['ros']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/Dockerfile) by extension 'ros'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/Dockerfile) by extensions ['cmake', 'python']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/Dockerfile) by extension 'cmake'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/Dockerfile) by extension 'python'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/Dockerfile) by extensions ['python_setup_py']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/Dockerfile) by extension 'python_setup_py'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc) by extensions ['ignore', 'ignore_ament_install']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc) by extension 'ignore'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc) by extension 'ignore_ament_install'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc) by extensions ['colcon_pkg']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc) by extension 'colcon_pkg'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc) by extensions ['colcon_meta']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc) by extension 'colcon_meta'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc) by extensions ['ros']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc) by extension 'ros'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc) by extensions ['cmake', 'python']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc) by extension 'cmake'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc) by extension 'python'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc) by extensions ['python_setup_py']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc) by extension 'python_setup_py'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc/img) by extensions ['ignore', 'ignore_ament_install']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc/img) by extension 'ignore'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc/img) by extension 'ignore_ament_install'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc/img) by extensions ['colcon_pkg']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc/img) by extension 'colcon_pkg'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc/img) by extensions ['colcon_meta']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc/img) by extension 'colcon_meta'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc/img) by extensions ['ros']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc/img) by extension 'ros'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc/img) by extensions ['cmake', 'python']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc/img) by extension 'cmake'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc/img) by extension 'python'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc/img) by extensions ['python_setup_py']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/doc/img) by extension 'python_setup_py'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/gz_ros2_control_tests) by extensions ['ignore', 'ignore_ament_install']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/gz_ros2_control_tests) by extension 'ignore'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/gz_ros2_control_tests) by extension 'ignore_ament_install'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/gz_ros2_control_tests) by extensions ['colcon_pkg']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/gz_ros2_control_tests) by extension 'colcon_pkg'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/gz_ros2_control_tests) by extensions ['colcon_meta']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/gz_ros2_control_tests) by extension 'colcon_meta'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/gz_ros2_control_tests) by extensions ['ros']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/gz_ros2_control_tests) by extension 'ros'
+[0.311s] DEBUG:colcon.colcon_core.package_identification:Package 'omni_wheel_controller_sample/gz_ros2_control/gz_ros2_control_tests' with type 'ros.ament_cmake' and name 'gz_ros2_control_tests'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control) by extensions ['ignore', 'ignore_ament_install']
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control) by extension 'ignore'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control) by extension 'ignore_ament_install'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control) by extensions ['colcon_pkg']
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control) by extension 'colcon_pkg'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control) by extensions ['colcon_meta']
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control) by extension 'colcon_meta'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control) by extensions ['ros']
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control) by extension 'ros'
+[0.325s] DEBUG:colcon.colcon_core.package_identification:Package 'omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control' with type 'ros.ament_cmake' and name 'ign_ros2_control'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control_demos) by extensions ['ignore', 'ignore_ament_install']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control_demos) by extension 'ignore'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control_demos) by extension 'ignore_ament_install'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control_demos) by extensions ['colcon_pkg']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control_demos) by extension 'colcon_pkg'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control_demos) by extensions ['colcon_meta']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control_demos) by extension 'colcon_meta'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control_demos) by extensions ['ros']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control_demos) by extension 'ros'
+[0.327s] DEBUG:colcon.colcon_core.package_identification:Package 'omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control_demos' with type 'ros.ament_cmake' and name 'ign_ros2_control_demos'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/omni_wheel_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/omni_wheel_controller) by extension 'ignore'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/omni_wheel_controller) by extension 'ignore_ament_install'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/omni_wheel_controller) by extensions ['colcon_pkg']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/omni_wheel_controller) by extension 'colcon_pkg'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/omni_wheel_controller) by extensions ['colcon_meta']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/omni_wheel_controller) by extension 'colcon_meta'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/omni_wheel_controller) by extensions ['ros']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/omni_wheel_controller) by extension 'ros'
+[0.329s] DEBUG:colcon.colcon_core.package_identification:Package 'omni_wheel_controller_sample/omni_wheel_controller' with type 'ros.ament_cmake' and name 'omni_wheel_controller'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/sample_robot_description) by extensions ['ignore', 'ignore_ament_install']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/sample_robot_description) by extension 'ignore'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/sample_robot_description) by extension 'ignore_ament_install'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/sample_robot_description) by extensions ['colcon_pkg']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/sample_robot_description) by extension 'colcon_pkg'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/sample_robot_description) by extensions ['colcon_meta']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/sample_robot_description) by extension 'colcon_meta'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/sample_robot_description) by extensions ['ros']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/sample_robot_description) by extension 'ros'
+[0.330s] DEBUG:colcon.colcon_core.package_identification:Package 'omni_wheel_controller_sample/sample_robot_description' with type 'ros.ament_cmake' and name 'sample_robot_description'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/sample_robot_sim) by extensions ['ignore', 'ignore_ament_install']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/sample_robot_sim) by extension 'ignore'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/sample_robot_sim) by extension 'ignore_ament_install'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/sample_robot_sim) by extensions ['colcon_pkg']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/sample_robot_sim) by extension 'colcon_pkg'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/sample_robot_sim) by extensions ['colcon_meta']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/sample_robot_sim) by extension 'colcon_meta'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/sample_robot_sim) by extensions ['ros']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/sample_robot_sim) by extension 'ros'
+[0.331s] DEBUG:colcon.colcon_core.package_identification:Package 'omni_wheel_controller_sample/sample_robot_sim' with type 'ros.ament_cmake' and name 'sample_robot_sim'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/velocity_pub) by extensions ['ignore', 'ignore_ament_install']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/velocity_pub) by extension 'ignore'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/velocity_pub) by extension 'ignore_ament_install'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/velocity_pub) by extensions ['colcon_pkg']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/velocity_pub) by extension 'colcon_pkg'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/velocity_pub) by extensions ['colcon_meta']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/velocity_pub) by extension 'colcon_meta'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/velocity_pub) by extensions ['ros']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(omni_wheel_controller_sample/velocity_pub) by extension 'ros'
+[0.332s] DEBUG:colcon.colcon_core.package_identification:Package 'omni_wheel_controller_sample/velocity_pub' with type 'ros.ament_cmake' and name 'velocity_pub'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extensions ['ignore', 'ignore_ament_install']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'ignore'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'ignore_ament_install'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extensions ['colcon_pkg']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'colcon_pkg'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extensions ['colcon_meta']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'colcon_meta'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extensions ['ros']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'ros'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extensions ['cmake', 'python']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'cmake'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'python'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extensions ['python_setup_py']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros) by extension 'python_setup_py'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extensions ['ignore', 'ignore_ament_install']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extension 'ignore'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extension 'ignore_ament_install'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extensions ['colcon_pkg']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extension 'colcon_pkg'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extensions ['colcon_meta']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extension 'colcon_meta'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extensions ['ros']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera) by extension 'ros'
+[0.337s] DEBUG:colcon.colcon_core.package_identification:Package 'realsense-ros/realsense2_camera' with type 'ros.ament_cmake' and name 'realsense2_camera'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extension 'ignore'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extension 'ignore_ament_install'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extensions ['colcon_pkg']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extension 'colcon_pkg'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extensions ['colcon_meta']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extension 'colcon_meta'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extensions ['ros']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_camera_msgs) by extension 'ros'
+[0.338s] DEBUG:colcon.colcon_core.package_identification:Package 'realsense-ros/realsense2_camera_msgs' with type 'ros.ament_cmake' and name 'realsense2_camera_msgs'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extensions ['ignore', 'ignore_ament_install']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extension 'ignore'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extension 'ignore_ament_install'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extensions ['colcon_pkg']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extension 'colcon_pkg'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extensions ['colcon_meta']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extension 'colcon_meta'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extensions ['ros']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/realsense2_description) by extension 'ros'
+[0.339s] DEBUG:colcon.colcon_core.package_identification:Package 'realsense-ros/realsense2_description' with type 'ros.ament_cmake' and name 'realsense2_description'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'ignore'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'ignore_ament_install'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extensions ['colcon_pkg']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'colcon_pkg'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extensions ['colcon_meta']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'colcon_meta'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extensions ['ros']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'ros'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extensions ['cmake', 'python']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'cmake'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'python'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extensions ['python_setup_py']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(realsense-ros/scripts) by extension 'python_setup_py'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(sick_scan_xd) by extensions ['ignore', 'ignore_ament_install']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(sick_scan_xd) by extension 'ignore'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(sick_scan_xd) by extension 'ignore_ament_install'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(sick_scan_xd) by extensions ['colcon_pkg']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(sick_scan_xd) by extension 'colcon_pkg'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(sick_scan_xd) by extensions ['colcon_meta']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(sick_scan_xd) by extension 'colcon_meta'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(sick_scan_xd) by extensions ['ros']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(sick_scan_xd) by extension 'ros'
+[0.348s] DEBUG:colcon.colcon_core.package_identification:Package 'sick_scan_xd' with type 'ros.ament_cmake' and name 'sick_scan_xd'
+[0.349s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.349s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.349s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.349s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.349s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.371s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'backward_ros' in 'backward_ros'
+[0.371s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'ign_ros2_control' in 'omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control'
+[0.371s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'joy_to_twist' in 'joy_to_twist'
+[0.371s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'movo_base_motor_control' in 'movo_base_motor_control'
+[0.371s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'realsense2_camera_msgs' in 'realsense-ros/realsense2_camera_msgs'
+[0.371s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'sample_robot_description' in 'omni_wheel_controller_sample/sample_robot_description'
+[0.371s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'sample_robot_sim' in 'omni_wheel_controller_sample/sample_robot_sim'
+[0.371s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'sick_scan_xd' in 'sick_scan_xd'
+[0.371s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'velocity_pub' in 'omni_wheel_controller_sample/velocity_pub'
+[0.371s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'gz_ros2_control_tests' in 'omni_wheel_controller_sample/gz_ros2_control/gz_ros2_control_tests'
+[0.371s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'ign_ros2_control_demos' in 'omni_wheel_controller_sample/gz_ros2_control/ign_ros2_control_demos'
+[0.371s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'omni_wheel_controller' in 'omni_wheel_controller_sample/omni_wheel_controller'
+[0.371s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'realsense2_camera' in 'realsense-ros/realsense2_camera'
+[0.371s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'realsense2_description' in 'realsense-ros/realsense2_description'
+[0.371s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.371s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.373s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/movo_base/movobase_ws/src/install/movo_urdf' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.374s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/movo_base/movobase_ws/src/install/movo_urdf' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.375s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 14 installed packages in /home/movo_base/movobase_ws/src/install
+[0.376s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 16 installed packages in /home/movo_base/movobase_ws/install
+[0.379s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 329 installed packages in /opt/ros/humble
+[0.381s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.427s] Level 5:colcon.colcon_core.verb:set package 'movo_description' build argument 'cmake_args' from command line to 'None'
+[0.427s] Level 5:colcon.colcon_core.verb:set package 'movo_description' build argument 'cmake_target' from command line to 'None'
+[0.428s] Level 5:colcon.colcon_core.verb:set package 'movo_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.428s] Level 5:colcon.colcon_core.verb:set package 'movo_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.428s] Level 5:colcon.colcon_core.verb:set package 'movo_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.428s] Level 5:colcon.colcon_core.verb:set package 'movo_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.428s] Level 5:colcon.colcon_core.verb:set package 'movo_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.428s] Level 5:colcon.colcon_core.verb:set package 'movo_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.428s] Level 5:colcon.colcon_core.verb:set package 'movo_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.428s] DEBUG:colcon.colcon_core.verb:Building package 'movo_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/movo_base/movobase_ws/src/build/movo_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/movo_base/movobase_ws/src/install/movo_description', 'merge_install': False, 'path': '/home/movo_base/movobase_ws/src/movo_description', 'symlink_install': True, 'test_result_base': None}
+[0.428s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.429s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.429s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/movo_base/movobase_ws/src/movo_description' with build type 'ament_cmake'
+[0.429s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/movo_base/movobase_ws/src/movo_description'
+[0.432s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.432s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.432s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.445s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/movo_base/movobase_ws/src/build/movo_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake /home/movo_base/movobase_ws/src/movo_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/movo_base/movobase_ws/src/install/movo_description
+[1.226s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/movo_base/movobase_ws/src/build/movo_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake /home/movo_base/movobase_ws/src/movo_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/movo_base/movobase_ws/src/install/movo_description
+[1.229s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/movo_base/movobase_ws/src/build/movo_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --build /home/movo_base/movobase_ws/src/build/movo_description -- -j4 -l4
+[1.276s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/movo_base/movobase_ws/src/build/movo_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --build /home/movo_base/movobase_ws/src/build/movo_description -- -j4 -l4
+[1.289s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/movo_base/movobase_ws/src/build/movo_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --install /home/movo_base/movobase_ws/src/build/movo_description
+[2.305s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(movo_description)
+[2.306s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/movo_base/movobase_ws/src/build/movo_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --install /home/movo_base/movobase_ws/src/build/movo_description
+[2.308s] Level 1:colcon.colcon_core.environment:checking '/home/movo_base/movobase_ws/src/install/movo_description' for CMake module files
+[2.308s] Level 1:colcon.colcon_core.environment:checking '/home/movo_base/movobase_ws/src/install/movo_description' for CMake config files
+[2.309s] Level 1:colcon.colcon_core.shell:create_environment_hook('movo_description', 'cmake_prefix_path')
+[2.309s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/movo_base/movobase_ws/src/install/movo_description/share/movo_description/hook/cmake_prefix_path.ps1'
+[2.310s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/movo_base/movobase_ws/src/install/movo_description/share/movo_description/hook/cmake_prefix_path.dsv'
+[2.310s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/movo_base/movobase_ws/src/install/movo_description/share/movo_description/hook/cmake_prefix_path.sh'
+[2.311s] Level 1:colcon.colcon_core.environment:checking '/home/movo_base/movobase_ws/src/install/movo_description/bin'
+[2.311s] Level 1:colcon.colcon_core.environment:checking '/home/movo_base/movobase_ws/src/install/movo_description/lib/pkgconfig/movo_description.pc'
+[2.311s] Level 1:colcon.colcon_core.environment:checking '/home/movo_base/movobase_ws/src/install/movo_description/lib/python3.10/site-packages'
+[2.311s] Level 1:colcon.colcon_core.environment:checking '/home/movo_base/movobase_ws/src/install/movo_description/bin'
+[2.311s] INFO:colcon.colcon_core.shell:Creating package script '/home/movo_base/movobase_ws/src/install/movo_description/share/movo_description/package.ps1'
+[2.312s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/movo_base/movobase_ws/src/install/movo_description/share/movo_description/package.dsv'
+[2.312s] INFO:colcon.colcon_core.shell:Creating package script '/home/movo_base/movobase_ws/src/install/movo_description/share/movo_description/package.sh'
+[2.313s] INFO:colcon.colcon_core.shell:Creating package script '/home/movo_base/movobase_ws/src/install/movo_description/share/movo_description/package.bash'
+[2.314s] INFO:colcon.colcon_core.shell:Creating package script '/home/movo_base/movobase_ws/src/install/movo_description/share/movo_description/package.zsh'
+[2.314s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/movo_base/movobase_ws/src/install/movo_description/share/colcon-core/packages/movo_description)
+[2.315s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(movo_description)
+[2.315s] Level 1:colcon.colcon_core.environment:checking '/home/movo_base/movobase_ws/src/install/movo_description' for CMake module files
+[2.315s] Level 1:colcon.colcon_core.environment:checking '/home/movo_base/movobase_ws/src/install/movo_description' for CMake config files
+[2.316s] Level 1:colcon.colcon_core.shell:create_environment_hook('movo_description', 'cmake_prefix_path')
+[2.316s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/movo_base/movobase_ws/src/install/movo_description/share/movo_description/hook/cmake_prefix_path.ps1'
+[2.316s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/movo_base/movobase_ws/src/install/movo_description/share/movo_description/hook/cmake_prefix_path.dsv'
+[2.316s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/movo_base/movobase_ws/src/install/movo_description/share/movo_description/hook/cmake_prefix_path.sh'
+[2.317s] Level 1:colcon.colcon_core.environment:checking '/home/movo_base/movobase_ws/src/install/movo_description/bin'
+[2.317s] Level 1:colcon.colcon_core.environment:checking '/home/movo_base/movobase_ws/src/install/movo_description/lib/pkgconfig/movo_description.pc'
+[2.317s] Level 1:colcon.colcon_core.environment:checking '/home/movo_base/movobase_ws/src/install/movo_description/lib/python3.10/site-packages'
+[2.317s] Level 1:colcon.colcon_core.environment:checking '/home/movo_base/movobase_ws/src/install/movo_description/bin'
+[2.318s] INFO:colcon.colcon_core.shell:Creating package script '/home/movo_base/movobase_ws/src/install/movo_description/share/movo_description/package.ps1'
+[2.318s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/movo_base/movobase_ws/src/install/movo_description/share/movo_description/package.dsv'
+[2.318s] INFO:colcon.colcon_core.shell:Creating package script '/home/movo_base/movobase_ws/src/install/movo_description/share/movo_description/package.sh'
+[2.319s] INFO:colcon.colcon_core.shell:Creating package script '/home/movo_base/movobase_ws/src/install/movo_description/share/movo_description/package.bash'
+[2.319s] INFO:colcon.colcon_core.shell:Creating package script '/home/movo_base/movobase_ws/src/install/movo_description/share/movo_description/package.zsh'
+[2.320s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/movo_base/movobase_ws/src/install/movo_description/share/colcon-core/packages/movo_description)
+[2.320s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.320s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.320s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.320s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.326s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.326s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.326s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.340s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.341s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/movo_base/movobase_ws/src/install/local_setup.ps1'
+[2.342s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/movo_base/movobase_ws/src/install/_local_setup_util_ps1.py'
+[2.343s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/movo_base/movobase_ws/src/install/setup.ps1'
+[2.347s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/movo_base/movobase_ws/src/install/local_setup.sh'
+[2.347s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/movo_base/movobase_ws/src/install/_local_setup_util_sh.py'
+[2.348s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/movo_base/movobase_ws/src/install/setup.sh'
+[2.350s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/movo_base/movobase_ws/src/install/local_setup.bash'
+[2.351s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/movo_base/movobase_ws/src/install/setup.bash'
+[2.354s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/movo_base/movobase_ws/src/install/local_setup.zsh'
+[2.354s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/movo_base/movobase_ws/src/install/setup.zsh'

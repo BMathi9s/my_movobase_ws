@@ -1,0 +1,15 @@
+slam_toolbox:
+  ros__parameters:
+    use_sim_time: false     # Change to `true` if using simulated time
+    base_frame: base_link
+    odom_frame: odom
+    map_frame: map
+    # queue_size: 500  # << Increase queue size
+    scan_topic: /scan
+    minimum_travel_distance: 0.01  # Lower this to ensure updates happen
+    minimum_travel_heading: 0.01   # Lower this for rotation updates
+    resolution: 0.05
+    # min_laser_range: 0.25   # Match RealSense Min Range
+    # max_laser_range: 5.0   # Match RealSense Max Range
+    mode: "mapping"
+    # This uses the synchronous SLAM node. For more advanced usage, see slam_toolbox docs.

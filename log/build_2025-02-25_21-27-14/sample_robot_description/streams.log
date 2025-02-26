@@ -1,0 +1,93 @@
+[0.061s] Invoking command in '/home/movo_base/movobase_ws/build/sample_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake /home/movo_base/movobase_ws/src/omni_wheel_controller_sample/sample_robot_description -DCMAKE_INSTALL_PREFIX=/home/movo_base/movobase_ws/install/sample_robot_description
+[0.231s] -- The C compiler identification is GNU 12.3.0
+[0.397s] -- The CXX compiler identification is GNU 12.3.0
+[0.415s] -- Detecting C compiler ABI info
+[0.640s] -- Detecting C compiler ABI info - done
+[0.657s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.658s] -- Detecting C compile features
+[0.659s] -- Detecting C compile features - done
+[0.664s] -- Detecting CXX compiler ABI info
+[0.904s] -- Detecting CXX compiler ABI info - done
+[0.946s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.947s] -- Detecting CXX compile features
+[0.947s] -- Detecting CXX compile features - done
+[0.952s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.352s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.616s] -- Found xacro: 2.0.8 (/opt/ros/humble/share/xacro/cmake)
+[1.635s] -- Found robot_state_publisher: 3.0.3 (/opt/ros/humble/share/robot_state_publisher/cmake)
+[1.844s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.862s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.909s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.000s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.128s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.606s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[2.611s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.613s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.996s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[3.030s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[3.386s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[3.617s] -- Found FastRTPS: /opt/ros/humble/include  
+[3.883s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.990s] -- Looking for pthread.h
+[4.247s] -- Looking for pthread.h - found
+[4.247s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.691s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[4.696s] -- Found Threads: TRUE  
+[6.054s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[6.462s] -- Added test 'copyright' to check source files copyright and LICENSE
+[6.471s] -- Added test 'flake8' to check Python code syntax and style conventions
+[6.476s] -- Added test 'lint_cmake' to check CMake code style
+[6.476s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[6.515s] -- Added test 'xmllint' to check XML markup files
+[6.515s] -- Configuring done
+[6.515s] -- Generating done
+[6.515s] -- Build files have been written to: /home/movo_base/movobase_ws/build/sample_robot_description
+[6.531s] Invoked command in '/home/movo_base/movobase_ws/build/sample_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake /home/movo_base/movobase_ws/src/omni_wheel_controller_sample/sample_robot_description -DCMAKE_INSTALL_PREFIX=/home/movo_base/movobase_ws/install/sample_robot_description
+[6.534s] Invoking command in '/home/movo_base/movobase_ws/build/sample_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --build /home/movo_base/movobase_ws/build/sample_robot_description -- -j4 -l4
+[6.759s] Invoked command in '/home/movo_base/movobase_ws/build/sample_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --build /home/movo_base/movobase_ws/build/sample_robot_description -- -j4 -l4
+[6.762s] Invoking command in '/home/movo_base/movobase_ws/build/sample_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --install /home/movo_base/movobase_ws/build/sample_robot_description
+[6.789s] -- Install configuration: ""
+[6.789s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/robots
+[6.791s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/robots/sample_robot.urdf.xacro
+[6.791s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/urdf
+[6.791s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/urdf/base
+[6.791s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/urdf/base/base.gazebo.xacro
+[6.791s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/urdf/base/base.urdf.xacro
+[6.791s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/urdf/common.xacro
+[6.791s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/urdf/wheel
+[6.792s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/urdf/wheel/wheel.gazebo.xacro
+[6.792s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/urdf/wheel/wheel_100mm.urdf.xacro
+[6.792s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/urdf/wheel/wheel.transmission.xacro
+[6.793s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/urdf/wheel/wheel.urdf.xacro
+[6.793s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/urdf/wheel/wheel_100mm_light.urdf.xacro
+[6.796s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/meshes
+[6.796s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/meshes/STL
+[6.797s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/meshes/STL/omni_housing.stl
+[6.797s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/meshes/STL/omni_barrel_100mm.stl
+[6.798s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/meshes/STL/omni_housing_100mm.stl
+[6.798s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/meshes/STL/omni_barrel.stl
+[6.798s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/gazebo
+[6.798s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/gazebo/sample_robot.gazebo.xacro
+[6.799s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/ros2_control
+[6.799s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/ros2_control/sample_robot.ros2_control.xacro
+[6.799s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/config
+[6.805s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/config/sample_robot_config.yaml
+[6.805s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/config/sample_robot_description.rviz
+[6.807s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/launch
+[6.807s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/launch/sample_robot_description.launch.py
+[6.808s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/ament_index/resource_index/package_run_dependencies/sample_robot_description
+[6.808s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/ament_index/resource_index/parent_prefix_path/sample_robot_description
+[6.808s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/environment/ament_prefix_path.sh
+[6.810s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/environment/ament_prefix_path.dsv
+[6.810s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/environment/path.sh
+[6.812s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/environment/path.dsv
+[6.812s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/local_setup.bash
+[6.812s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/local_setup.sh
+[6.812s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/local_setup.zsh
+[6.812s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/local_setup.dsv
+[6.812s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/package.dsv
+[6.813s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/ament_index/resource_index/packages/sample_robot_description
+[6.813s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/cmake/sample_robot_descriptionConfig.cmake
+[6.813s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/cmake/sample_robot_descriptionConfig-version.cmake
+[6.813s] -- Installing: /home/movo_base/movobase_ws/install/sample_robot_description/share/sample_robot_description/package.xml
+[6.832s] Invoked command in '/home/movo_base/movobase_ws/build/sample_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --install /home/movo_base/movobase_ws/build/sample_robot_description

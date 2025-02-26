@@ -1,0 +1,44 @@
+[0.051s] Invoking command in '/home/movo_base/movobase_ws/build/backward_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake /home/movo_base/movobase_ws/src/backward_ros -DCMAKE_INSTALL_PREFIX=/home/movo_base/movobase_ws/install/backward_ros
+[0.317s] -- The C compiler identification is GNU 12.3.0
+[0.490s] -- The CXX compiler identification is GNU 12.3.0
+[0.521s] -- Detecting C compiler ABI info
+[0.652s] -- Detecting C compiler ABI info - done
+[0.669s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.669s] -- Detecting C compile features
+[0.673s] -- Detecting C compile features - done
+[0.676s] -- Detecting CXX compiler ABI info
+[0.891s] -- Detecting CXX compiler ABI info - done
+[0.919s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.921s] -- Detecting CXX compile features
+[0.922s] -- Detecting CXX compile features - done
+[0.952s] -- Found libdw: /usr/lib/x86_64-linux-gnu/libdw.so  
+[0.963s] -- Could NOT find libbfd (missing: LIBBFD_LIBRARY LIBBFD_INCLUDE_DIR) 
+[0.963s] -- BACKWARD_HAS_UNWIND=1
+[0.963s] -- BACKWARD_HAS_BACKTRACE=0
+[0.963s] -- BACKWARD_HAS_BACKTRACE_SYMBOL=0
+[0.964s] -- BACKWARD_HAS_DW=1
+[0.964s] -- BACKWARD_HAS_BFD=0
+[0.966s] -- Found Backward: /home/movo_base/movobase_ws/src/backward_ros/cmake  
+[0.969s] -- Configuring done
+[0.980s] -- Generating done
+[0.980s] -- Build files have been written to: /home/movo_base/movobase_ws/build/backward_ros
+[0.987s] Invoked command in '/home/movo_base/movobase_ws/build/backward_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake /home/movo_base/movobase_ws/src/backward_ros -DCMAKE_INSTALL_PREFIX=/home/movo_base/movobase_ws/install/backward_ros
+[0.990s] Invoking command in '/home/movo_base/movobase_ws/build/backward_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --build /home/movo_base/movobase_ws/build/backward_ros -- -j4 -l4
+[1.096s] [ 33%] [32mBuilding CXX object CMakeFiles/backward_object.dir/src/backward.cpp.o[0m
+[1.107s] [ 66%] [32mBuilding CXX object CMakeFiles/backward.dir/src/backward.cpp.o[0m
+[3.791s] [ 66%] Built target backward_object
+[3.815s] [100%] [32m[1mLinking CXX shared library libbackward.so[0m
+[4.041s] [100%] Built target backward
+[4.082s] Invoked command in '/home/movo_base/movobase_ws/build/backward_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --build /home/movo_base/movobase_ws/build/backward_ros -- -j4 -l4
+[4.119s] Invoking command in '/home/movo_base/movobase_ws/build/backward_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --install /home/movo_base/movobase_ws/build/backward_ros
+[4.147s] -- Install configuration: ""
+[4.147s] -- Installing: /home/movo_base/movobase_ws/install/backward_ros/lib/libbackward.so
+[4.152s] -- Installing: /home/movo_base/movobase_ws/install/backward_ros/include
+[4.154s] -- Installing: /home/movo_base/movobase_ws/install/backward_ros/include/backward_ros
+[4.156s] -- Installing: /home/movo_base/movobase_ws/install/backward_ros/include/backward_ros/backward.hpp
+[4.156s] -- Installing: /home/movo_base/movobase_ws/install/backward_ros/share/backward_ros/cmake
+[4.157s] -- Installing: /home/movo_base/movobase_ws/install/backward_ros/share/backward_ros/cmake/BackwardConfig.cmake
+[4.157s] -- Installing: /home/movo_base/movobase_ws/install/backward_ros/share/backward_ros/cmake/BackwardConfigAment.cmake
+[4.157s] -- Installing: /home/movo_base/movobase_ws/install/backward_ros/share/backward_ros/cmake/BackwardConfig.cmake
+[4.158s] -- Installing: /home/movo_base/movobase_ws/install/backward_ros/share/backward_ros/cmake/backward_rosConfig.cmake
+[4.173s] Invoked command in '/home/movo_base/movobase_ws/build/backward_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --install /home/movo_base/movobase_ws/build/backward_ros

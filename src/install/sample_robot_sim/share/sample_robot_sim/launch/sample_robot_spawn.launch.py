@@ -1,0 +1,1 @@
+/home/movo_base/movobase_ws/src/omni_wheel_controller_sample/sample_robot_sim/launch/sample_robot_spawn.launch.py

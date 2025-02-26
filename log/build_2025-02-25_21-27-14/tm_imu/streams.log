@@ -1,0 +1,71 @@
+[0.048s] Invoking command in '/home/movo_base/movobase_ws/build/tm_imu': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake /home/movo_base/movobase_ws/src/tm_imu -DCMAKE_INSTALL_PREFIX=/home/movo_base/movobase_ws/install/tm_imu
+[0.410s] -- The C compiler identification is GNU 12.3.0
+[0.752s] -- The CXX compiler identification is GNU 12.3.0
+[0.804s] -- Detecting C compiler ABI info
+[1.143s] -- Detecting C compiler ABI info - done
+[1.191s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.191s] -- Detecting C compile features
+[1.194s] -- Detecting C compile features - done
+[1.208s] -- Detecting CXX compiler ABI info
+[1.768s] -- Detecting CXX compiler ABI info - done
+[1.830s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.831s] -- Detecting CXX compile features
+[1.836s] -- Detecting CXX compile features - done
+[1.862s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.635s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.956s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[3.148s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[3.173s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[3.201s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[3.361s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.649s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.387s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[4.466s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[5.207s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[5.459s] -- Found FastRTPS: /opt/ros/humble/include  
+[5.688s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[5.763s] -- Looking for pthread.h
+[6.232s] -- Looking for pthread.h - found
+[6.241s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[6.653s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[6.663s] -- Found Threads: TRUE  
+[6.861s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[7.011s] -- Found tf2: 0.25.12 (/opt/ros/humble/share/tf2/cmake)
+[7.072s] -- Found tf2_ros: 0.25.12 (/opt/ros/humble/share/tf2_ros/cmake)
+[7.450s] -- Configuring done
+[7.481s] -- Generating done
+[7.489s] -- Build files have been written to: /home/movo_base/movobase_ws/build/tm_imu
+[7.515s] Invoked command in '/home/movo_base/movobase_ws/build/tm_imu' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake /home/movo_base/movobase_ws/src/tm_imu -DCMAKE_INSTALL_PREFIX=/home/movo_base/movobase_ws/install/tm_imu
+[7.516s] Invoking command in '/home/movo_base/movobase_ws/build/tm_imu': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --build /home/movo_base/movobase_ws/build/tm_imu -- -j4 -l4
+[7.857s] [ 16%] [32mBuilding CXX object CMakeFiles/transducer_m_imu.dir/external/serialib/serialib.cpp.o[0m
+[7.878s] [ 33%] [32mBuilding CXX object CMakeFiles/transducer_m_imu.dir/src/tm_imu_node.cpp.o[0m
+[7.899s] [ 66%] [32mBuilding CXX object CMakeFiles/transducer_m_imu.dir/external/EasyProfile/EasyObjectDictionary.cpp.o[0m
+[7.906s] [ 66%] [32mBuilding CXX object CMakeFiles/transducer_m_imu.dir/external/EasyProfile/EasyProfile.cpp.o[0m
+[8.250s] [ 83%] [32mBuilding CXX object CMakeFiles/transducer_m_imu.dir/external/EasyProfile/EasyProtocol.cpp.o[0m
+[26.896s] [100%] [32m[1mLinking CXX executable transducer_m_imu[0m
+[27.878s] [100%] Built target transducer_m_imu
+[27.944s] Invoked command in '/home/movo_base/movobase_ws/build/tm_imu' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --build /home/movo_base/movobase_ws/build/tm_imu -- -j4 -l4
+[27.949s] Invoking command in '/home/movo_base/movobase_ws/build/tm_imu': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --install /home/movo_base/movobase_ws/build/tm_imu
+[27.978s] -- Install configuration: ""
+[27.979s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/lib/tm_imu/transducer_m_imu
+[27.987s] -- Set runtime path of "/home/movo_base/movobase_ws/install/tm_imu/lib/tm_imu/transducer_m_imu" to ""
+[27.990s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/tm_imu//launch
+[27.990s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/tm_imu//launch/imu.launch.py
+[27.990s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/tm_imu//config
+[27.990s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/tm_imu//config/params.yaml
+[27.992s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/ament_index/resource_index/package_run_dependencies/tm_imu
+[27.994s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/ament_index/resource_index/parent_prefix_path/tm_imu
+[27.994s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/tm_imu/environment/ament_prefix_path.sh
+[27.997s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/tm_imu/environment/ament_prefix_path.dsv
+[28.000s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/tm_imu/environment/path.sh
+[28.000s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/tm_imu/environment/path.dsv
+[28.001s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/tm_imu/local_setup.bash
+[28.001s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/tm_imu/local_setup.sh
+[28.004s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/tm_imu/local_setup.zsh
+[28.007s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/tm_imu/local_setup.dsv
+[28.007s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/tm_imu/package.dsv
+[28.009s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/ament_index/resource_index/packages/tm_imu
+[28.009s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/tm_imu/cmake/tm_imuConfig.cmake
+[28.009s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/tm_imu/cmake/tm_imuConfig-version.cmake
+[28.013s] -- Installing: /home/movo_base/movobase_ws/install/tm_imu/share/tm_imu/package.xml
+[28.022s] Invoked command in '/home/movo_base/movobase_ws/build/tm_imu' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --install /home/movo_base/movobase_ws/build/tm_imu

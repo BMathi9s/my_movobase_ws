@@ -1,0 +1,238 @@
+"""
+Run joy package (made by ros), allows IO with Xbox Controller 
+
+Run Joy to twist, IO controller => Twist Message X, Y and Angular Z
+
+Run Mecanum Wheel Controller => Twist to Single Wheel Velocity
+
+Run Omni wheel node => Sends Velocities to each wheel and reads back Velocity
+
+First Fix
+	- Turn the message of 4 wheels from each on their own to one single array of 4
+	- Make sure the order is the same as the bus (in any case the Run Omni wheel node writes to indivudla motors so it sjust better to transfer between motors)
+	- have two packages One called Wheel_Controller and the other Mecanum_Controller
+	- You can add a Joy Stick Controller Package too
+	- in any case I need a base_controller code that uses the wheel controller and mecanum controller, at the end of the day thats what I will control. For the topics that publish feedback velocity, leave as is. I need everything at a rate of 100 Hz. To run the base, I should only do Ros launch movo_base --control joystick (if we use joystick) --IMU on|off --camera on|off  thats all
+	- Import and build realsense topic too, I need depth and normal cam. 
+	- Try to get a package the USB IMU to work and publish the IMU 
+	- Right now if it shuts down the motors will keep on going, we need to find a way so that the last thing before it shuts down is that it sends 0 velocities to the motors
+	
+	
+		
+
+"""
+
+import time
+import threading
+
+import rclpy
+from rclpy.node import Node
+
+from std_msgs.msg import Float32, Float32MultiArray
+from nanotec_nanolib import Nanolib
+from .nanolib_helper import NanolibHelper #same folder
+# from nanolib_helper import NanolibHelper
+
+
+class MotorController:
+    def __init__(self, nanolib_helper, device_id, motor_name, wheel_circumference):
+        self.nanolib_helper = nanolib_helper
+        self.device = nanolib_helper.create_device(device_id)
+        self.motor_name = motor_name
+        self.wheel_circumference = wheel_circumference  # meters
+
+    def connect(self):
+        self.nanolib_helper.connect_device(self.device)
+
+    def disconnect(self):
+        try:
+            self.nanolib_helper.disconnect_device(self.device)
+        except Exception as e:
+            if "already disconnected" not in str(e):
+                raise e
+
+    def stop_nanoj_program(self):
+        self.nanolib_helper.write_number(self.device, 0, Nanolib.OdIndex(0x2300, 0x00), 32)
+
+    def set_profile_velocity_mode(self):
+        self.nanolib_helper.write_number(self.device, 3, Nanolib.OdIndex(0x6060, 0x00), 8)
+
+    def set_target_velocity(self, velocity_mps):
+        # Clamp velocity to max ±20.0 m/s
+        clamped_velocity = max(min(velocity_mps, 20.0), -20.0)
+
+        # Convert clamped m/s to RPM
+        rpm = int((clamped_velocity * 60) / self.wheel_circumference)
+        self.nanolib_helper.write_number(self.device, rpm, Nanolib.OdIndex(0x60FF, 0x00), 32)
+
+    def enable_operation(self):
+        # Transition the motor through states: 6 (enable voltage), 7 (switch on), 0xF (enable op)
+        for state in [6, 7, 0xF]:
+            self.nanolib_helper.write_number(self.device, state, Nanolib.OdIndex(0x6040, 0x00), 16)
+
+    def stop(self):
+        self.nanolib_helper.write_number(self.device, 0x6, Nanolib.OdIndex(0x6040, 0x00), 16)
+
+    def safe_stop(self):
+        """Safely stop the motor by setting its velocity to 0 and transitioning to a safe state."""
+        self.set_target_velocity(0.0)
+        self.nanolib_helper.write_number(self.device, 0x6, Nanolib.OdIndex(0x6040, 0x00), 16)
+
+    def read_position_velocity(self):
+        # Read position and velocity from the motor
+        position = self.nanolib_helper.read_number(self.device, Nanolib.OdIndex(0x6064, 0x00))  # counts
+        velocity_rpm = self.nanolib_helper.read_number(self.device, Nanolib.OdIndex(0x606C, 0x00))  # RPM
+
+        # Convert RPM to m/s
+        velocity_mps = (velocity_rpm * self.wheel_circumference) / 60
+        return position, velocity_mps
+
+    def monitor_loop(self, node: Node, pub: rclpy.publisher.Publisher):
+        """Continuously read position/velocity and publish velocity (m/s)."""
+        previous_velocity = 0.0
+        previous_time = time.time()
+        while rclpy.ok():
+            position, velocity_mps = self.read_position_velocity()
+            current_time = time.time()
+            time_diff = current_time - previous_time
+
+            acceleration = 0.0
+            if time_diff > 0:
+                acceleration = (velocity_mps - previous_velocity) / time_diff
+
+            node.get_logger().info(
+                f"[{self.motor_name}] Pos: {position}, Vel: {velocity_mps:.3f} m/s, Acc: {acceleration:.3f} m/s²"
+            )
+
+            pub.publish(Float32(data=velocity_mps))
+
+            previous_velocity = velocity_mps
+            previous_time = current_time
+            time.sleep(0.1)
+
+
+class MotorManager:
+    def __init__(self, nanolib_helper, device_ids, motor_names, wheel_circumference):
+        self.nanolib_helper = nanolib_helper
+        self.motors = [
+            MotorController(nanolib_helper, device_id, name, wheel_circumference)
+            for device_id, name in zip(device_ids, motor_names)
+        ]
+
+    def setup_motors(self, velocity_mps):
+        for motor in self.motors:
+            motor.connect()
+            motor.stop_nanoj_program()
+            motor.set_profile_velocity_mode()
+            motor.set_target_velocity(velocity_mps)
+            motor.enable_operation()
+
+    def stop_motors(self):
+        for motor in self.motors:
+            motor.stop()
+
+    def safe_stop_all(self):
+        for motor in self.motors:
+            motor.safe_stop()
+
+    def disconnect_all(self):
+        for motor in self.motors:
+            motor.disconnect()
+
+
+class OmniWheelNode(Node):
+    def __init__(self):
+        super().__init__('omni_wheel_node')
+        self.nanolib_helper = NanolibHelper()
+        self.nanolib_helper.setup()
+
+        # Discover hardware
+        bus_hardware_ids = self.nanolib_helper.get_bus_hardware()
+        if bus_hardware_ids.empty():
+            raise RuntimeError('No bus hardware found.')
+
+        peak_bus_id = next(hw for hw in bus_hardware_ids if "PEAK" in hw.getName())
+        bus_hw_options = self.nanolib_helper.create_bus_hardware_options(peak_bus_id)
+        self.nanolib_helper.open_bus_hardware(peak_bus_id, bus_hw_options)
+        self.peak_bus_id = peak_bus_id
+
+        # Motor setup
+        device_ids = [
+            Nanolib.DeviceId(peak_bus_id, 1, ""),
+            Nanolib.DeviceId(peak_bus_id, 2, ""),
+            Nanolib.DeviceId(peak_bus_id, 3, ""),
+            Nanolib.DeviceId(peak_bus_id, 4, ""),
+        ]
+        motor_names = ["Front Right", "Front Left", "Back Right", "Back Left"]
+
+        self.wheel_circumference = 0.0762* 3.14159
+        self.motor_manager = MotorManager(self.nanolib_helper, device_ids, motor_names, self.wheel_circumference)
+        self.motor_manager.setup_motors(velocity_mps=0.0)
+
+        # Create publishers and subscribers
+        self.wheel_state_pubs = {
+            "front_right": self.create_publisher(Float32, "/movo_base/wheel_states/front_right", 10),
+            "front_left": self.create_publisher(Float32, "/movo_base/wheel_states/front_left", 10),
+            "back_right": self.create_publisher(Float32, "/movo_base/wheel_states/back_right", 10),
+            "back_left": self.create_publisher(Float32, "/movo_base/wheel_states/back_left", 10),
+        }
+
+        self.create_subscription(Float32, "/movo_base/wheel_cmds/front_right", self.cb_front_right, 10)
+        self.create_subscription(Float32, "/movo_base/wheel_cmds/front_left", self.cb_front_left, 10)
+        self.create_subscription(Float32, "/movo_base/wheel_cmds/back_right", self.cb_back_right, 10)
+        self.create_subscription(Float32, "/movo_base/wheel_cmds/back_left", self.cb_back_left, 10)
+
+        # Launch monitoring threads
+        self.threads = []
+        for motor, (wheel_key, pub) in zip(self.motor_manager.motors, self.wheel_state_pubs.items()):
+            t = threading.Thread(target=motor.monitor_loop, args=(self, pub), daemon=True)
+            t.start()
+            self.threads.append(t)
+
+        self.get_logger().info("OmniWheelNode initialized and monitoring started.")
+
+    def cb_front_right(self, msg: Float32):
+        clamped_velocity = max(min(msg.data, 20.0), -20.0)
+        self.motor_manager.motors[0].set_target_velocity(clamped_velocity)
+        self.get_logger().info(f"Front Right Wheel Command: {msg.data} -> Clamped: {clamped_velocity}")
+
+    def cb_front_left(self, msg: Float32):
+        clamped_velocity = max(min(msg.data, 20.0), -20.0)
+        self.motor_manager.motors[1].set_target_velocity(clamped_velocity)
+        self.get_logger().info(f"Front Left Wheel Command: {msg.data} -> Clamped: {clamped_velocity}")
+
+    def cb_back_right(self, msg: Float32):
+        clamped_velocity = max(min(msg.data, 20.0), -20.0)
+        self.motor_manager.motors[2].set_target_velocity(clamped_velocity)
+        self.get_logger().info(f"Back Right Wheel Command: {msg.data} -> Clamped: {clamped_velocity}")
+
+    def cb_back_left(self, msg: Float32):
+        clamped_velocity = max(min(msg.data, 20.0), -20.0)
+        self.motor_manager.motors[3].set_target_velocity(clamped_velocity)
+        self.get_logger().info(f"Back Left Wheel Command: {msg.data} -> Clamped: {clamped_velocity}")
+
+    def destroy_node(self):
+        self.get_logger().info("Stopping motors and disconnecting...")
+        self.motor_manager.safe_stop_all()
+        self.motor_manager.disconnect_all()
+        self.nanolib_helper.close_bus_hardware(self.peak_bus_id)
+        self.get_logger().info("Motors safely stopped and hardware disconnected.")
+        super().destroy_node()
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = OmniWheelNode()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        node.get_logger().info("KeyboardInterrupt detected. Stopping...")
+    except Exception as e:
+        node.get_logger().error(f"Unhandled exception: {e}")
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+
+
+if __name__ == "__main__":
+    main()

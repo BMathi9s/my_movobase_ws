@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing movo_nav.egg-info/PKG-INFO
+writing dependency_links to movo_nav.egg-info/dependency_links.txt
+writing entry points to movo_nav.egg-info/entry_points.txt
+writing requirements to movo_nav.egg-info/requires.txt
+writing top-level names to movo_nav.egg-info/top_level.txt
+reading manifest file 'movo_nav.egg-info/SOURCES.txt'
+writing manifest file 'movo_nav.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/movo_base/movobase_ws/install/movo_nav/lib/python3.10/site-packages/movo-nav.egg-link (link to .)
+Installing dual_lidar_merger script to /home/movo_base/movobase_ws/install/movo_nav/lib/movo_nav
+
+Installed /home/movo_base/movobase_ws/build/movo_nav
+running symlink_data
+symbolically linking /home/movo_base/movobase_ws/build/movo_nav/resource/movo_nav -> /home/movo_base/movobase_ws/install/movo_nav/share/ament_index/resource_index/packages
+symbolically linking /home/movo_base/movobase_ws/build/movo_nav/package.xml -> /home/movo_base/movobase_ws/install/movo_nav/share/movo_nav
+error: [Errno 2] No such file or directory: '/home/movo_base/movobase_ws/install/movo_nav/share/movo_nav/launch/realseanse_2d_slam_launch.py'

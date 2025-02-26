@@ -1,0 +1,1 @@
+/home/movo_base/movobase_ws/src/build/omni_wheel_controller/ament_cmake_core/omni_wheel_controllerConfig-version.cmake

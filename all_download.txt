@@ -1,0 +1,18 @@
+
+
+
+#nav 2
+sudo apt update
+sudo apt install ros-humble-navigation2 ros-humble-nav2-bringup
+sudo apt install ros-humble-realsense2-camera
+#start camera node
+ros2 launch realsense2_camera rs_launch.py
+
+
+#slam
+
+sudo apt install ros-humble-slam-toolbox
+ros2 launch slam_toolbox online_async_launch.py
+
+
+

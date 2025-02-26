@@ -1,0 +1,72 @@
+[0.034s] Invoking command in '/home/movo_base/movobase_ws/build/velocity_pub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake /home/movo_base/movobase_ws/src/omni_wheel_controller_sample/velocity_pub -DCMAKE_INSTALL_PREFIX=/home/movo_base/movobase_ws/install/velocity_pub
+[0.386s] -- The C compiler identification is GNU 12.3.0
+[0.752s] -- The CXX compiler identification is GNU 12.3.0
+[0.809s] -- Detecting C compiler ABI info
+[1.089s] -- Detecting C compiler ABI info - done
+[1.152s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.157s] -- Detecting C compile features
+[1.157s] -- Detecting C compile features - done
+[1.169s] -- Detecting CXX compiler ABI info
+[1.516s] -- Detecting CXX compiler ABI info - done
+[1.566s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.567s] -- Detecting CXX compile features
+[1.571s] -- Detecting CXX compile features - done
+[1.586s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.448s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.705s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[2.831s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.847s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.875s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.928s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.026s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.243s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[3.260s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[3.718s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[3.880s] -- Found FastRTPS: /opt/ros/humble/include  
+[4.158s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.220s] -- Looking for pthread.h
+[4.663s] -- Looking for pthread.h - found
+[4.663s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.989s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[4.995s] -- Found Threads: TRUE  
+[5.314s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[5.402s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[5.920s] -- Added test 'copyright' to check source files copyright and LICENSE
+[5.925s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[5.926s] -- Configured cppcheck include dirs: 
+[5.926s] -- Configured cppcheck exclude dirs and/or files: 
+[5.937s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[5.937s] -- Configured cpplint exclude dirs and/or files: 
+[5.950s] -- Added test 'lint_cmake' to check CMake code style
+[5.961s] -- Added test 'uncrustify' to check C / C++ code style
+[5.962s] -- Configured uncrustify additional arguments: 
+[5.967s] -- Added test 'xmllint' to check XML markup files
+[5.985s] -- Configuring done
+[6.046s] -- Generating done
+[6.061s] -- Build files have been written to: /home/movo_base/movobase_ws/build/velocity_pub
+[6.089s] Invoked command in '/home/movo_base/movobase_ws/build/velocity_pub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake /home/movo_base/movobase_ws/src/omni_wheel_controller_sample/velocity_pub -DCMAKE_INSTALL_PREFIX=/home/movo_base/movobase_ws/install/velocity_pub
+[6.090s] Invoking command in '/home/movo_base/movobase_ws/build/velocity_pub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --build /home/movo_base/movobase_ws/build/velocity_pub -- -j4 -l4
+[6.279s] [ 50%] [32mBuilding CXX object CMakeFiles/velocity_pub.dir/src/velocity_pub.cpp.o[0m
+[29.054s] [100%] [32m[1mLinking CXX executable velocity_pub[0m
+[30.106s] [100%] Built target velocity_pub
+[30.150s] Invoked command in '/home/movo_base/movobase_ws/build/velocity_pub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --build /home/movo_base/movobase_ws/build/velocity_pub -- -j4 -l4
+[30.151s] Invoking command in '/home/movo_base/movobase_ws/build/velocity_pub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --install /home/movo_base/movobase_ws/build/velocity_pub
+[30.174s] -- Install configuration: ""
+[30.174s] -- Installing: /home/movo_base/movobase_ws/install/velocity_pub/lib/velocity_pub/velocity_pub
+[30.184s] -- Set runtime path of "/home/movo_base/movobase_ws/install/velocity_pub/lib/velocity_pub/velocity_pub" to ""
+[30.185s] -- Installing: /home/movo_base/movobase_ws/install/velocity_pub/share/ament_index/resource_index/package_run_dependencies/velocity_pub
+[30.189s] -- Installing: /home/movo_base/movobase_ws/install/velocity_pub/share/ament_index/resource_index/parent_prefix_path/velocity_pub
+[30.192s] -- Installing: /home/movo_base/movobase_ws/install/velocity_pub/share/velocity_pub/environment/ament_prefix_path.sh
+[30.194s] -- Installing: /home/movo_base/movobase_ws/install/velocity_pub/share/velocity_pub/environment/ament_prefix_path.dsv
+[30.195s] -- Installing: /home/movo_base/movobase_ws/install/velocity_pub/share/velocity_pub/environment/path.sh
+[30.195s] -- Installing: /home/movo_base/movobase_ws/install/velocity_pub/share/velocity_pub/environment/path.dsv
+[30.195s] -- Installing: /home/movo_base/movobase_ws/install/velocity_pub/share/velocity_pub/local_setup.bash
+[30.195s] -- Installing: /home/movo_base/movobase_ws/install/velocity_pub/share/velocity_pub/local_setup.sh
+[30.195s] -- Installing: /home/movo_base/movobase_ws/install/velocity_pub/share/velocity_pub/local_setup.zsh
+[30.196s] -- Installing: /home/movo_base/movobase_ws/install/velocity_pub/share/velocity_pub/local_setup.dsv
+[30.199s] -- Installing: /home/movo_base/movobase_ws/install/velocity_pub/share/velocity_pub/package.dsv
+[30.202s] -- Installing: /home/movo_base/movobase_ws/install/velocity_pub/share/ament_index/resource_index/packages/velocity_pub
+[30.202s] -- Installing: /home/movo_base/movobase_ws/install/velocity_pub/share/velocity_pub/cmake/velocity_pubConfig.cmake
+[30.202s] -- Installing: /home/movo_base/movobase_ws/install/velocity_pub/share/velocity_pub/cmake/velocity_pubConfig-version.cmake
+[30.202s] -- Installing: /home/movo_base/movobase_ws/install/velocity_pub/share/velocity_pub/package.xml
+[30.218s] Invoked command in '/home/movo_base/movobase_ws/build/velocity_pub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --install /home/movo_base/movobase_ws/build/velocity_pub

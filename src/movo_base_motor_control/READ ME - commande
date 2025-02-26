@@ -1,0 +1,52 @@
+Xbox-control commande 
+
+ros2 launch movo_base_motor_control movo_base.launch.py
+
+
+
+
+Topics Used in OmniWheelNode
+Topic	Message Type	Direction	Purpose
+/movo_base/wheel_cmds	Float32MultiArray	Subscriber	Receives velocity commands (4 values in m/s).
+/movo_base/set_acceleration	Float32MultiArray	Subscriber	Receives acceleration setting (1 value in m/s²).
+/movo_base/wheel_states	Float32MultiArray	Publisher	Publishes actual motor speeds (4 values in m/s).
+
+
+Quick Summary of MotorController Functions
+Function Name	Purpose	Inputs	Outputs
+__init__()	Initializes the motor object	nanolib_helper, device_id, motor_name, wheel_circumference, steps_per_rev=2000	None
+connect()	Connects to the motor	None	None
+disconnect()	Disconnects from the motor	None	None
+stop_nanoj_program()	Stops any running NanoJ program on the motor	None	None
+set_profile_velocity_mode()	Sets the motor to Velocity Mode (0x6060)	None	None
+enable_operation()	Enables motor operation via control word (0x6040)	None	None
+set_target_velocity()	Sets the motor speed in steps/s (0x6042)	velocity_mps (meters per second)	None
+stop()	Stops the motor using control word (0x6040)	None	None
+safe_stop()	Stops motor safely by setting velocity to zero	None	None
+read_velocity()	Reads actual velocity in steps/s (0x6044)	None	velocity_mps (meters per second)
+set_acceleration()	Sets acceleration in steps/s² (0x6048)	acceleration_mps2 (meters per second²)	None
+monitor_loop()	Monitors & publishes velocity over ROS2	node, pub	None
+
+Summary of MotorManager Functions
+Function Name	Purpose	Inputs	Outputs
+__init__()	Initializes the motor manager and creates MotorController instances	nanolib_helper, device_ids, motor_names, wheel_circumference, steps_per_rev=2000	None
+setup_motors()	Initializes all motors, sets acceleration, and assigns an initial velocity	velocity_mps=0.0, acceleration_mps2=2.0	None
+set_all_velocities()	Sets a new velocity for all motors	velocity_mps (meters per second)	None
+set_all_accelerations()	Sets a new acceleration for all motors	acceleration_mps2 (meters per second²)	None
+stop_motors()	Immediately stops all motors	None	None
+safe_stop_all()	Safely stops all motors by first setting velocity to 0	None	None
+disconnect_all()	Disconnects all motors from the CAN bus	None	None
+read_all_velocities()	Reads the actual velocity from all motors and returns it as a list	None	list[velocity_mps] (meters per second)
+
+
+
+
+------------------
+
+ros2 run movo_base_motor_control omni_wheel_node
+
+ros2 topic echo /movo_base/wheel_states
+
+ros2 topic pub /movo_base/wheel_cmds std_msgs/msg/Float32MultiArray "{data: [0.0, 0.0, 0.0, 0.0]}"
+
+ros2 topic pub /movo_base/set_acceleration std_msgs/msg/Float32MultiArray "{data: [2.0]}"

@@ -1,0 +1,158 @@
+[0.035s] Invoking command in '/home/movo_base/movobase_ws/build/movo_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake /home/movo_base/movobase_ws/src/movo_description -DCMAKE_INSTALL_PREFIX=/home/movo_base/movobase_ws/install/movo_description
+[0.180s] -- The C compiler identification is GNU 12.3.0
+[0.338s] -- The CXX compiler identification is GNU 12.3.0
+[0.382s] -- Detecting C compiler ABI info
+[0.554s] -- Detecting C compiler ABI info - done
+[0.575s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.575s] -- Detecting C compile features
+[0.575s] -- Detecting C compile features - done
+[0.585s] -- Detecting CXX compiler ABI info
+[0.818s] -- Detecting CXX compiler ABI info - done
+[0.879s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.879s] -- Detecting CXX compile features
+[0.880s] -- Detecting CXX compile features - done
+[0.912s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.362s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.023s] -- Configuring done
+[2.035s] -- Generating done
+[2.042s] -- Build files have been written to: /home/movo_base/movobase_ws/build/movo_description
+[2.067s] Invoked command in '/home/movo_base/movobase_ws/build/movo_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake /home/movo_base/movobase_ws/src/movo_description -DCMAKE_INSTALL_PREFIX=/home/movo_base/movobase_ws/install/movo_description
+[2.068s] Invoking command in '/home/movo_base/movobase_ws/build/movo_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --build /home/movo_base/movobase_ws/build/movo_description -- -j4 -l4
+[2.198s] Invoked command in '/home/movo_base/movobase_ws/build/movo_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --build /home/movo_base/movobase_ws/build/movo_description -- -j4 -l4
+[2.199s] Invoking command in '/home/movo_base/movobase_ws/build/movo_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --install /home/movo_base/movobase_ws/build/movo_description
+[2.222s] -- Install configuration: ""
+[2.222s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf
+[2.222s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/gzplugin_grasp_fix.urdf.xacro
+[2.222s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/manipulation
+[2.222s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/manipulation/robotiq
+[2.223s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/manipulation/robotiq/robotiq_85_gripper.urdf.xacro
+[2.223s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/manipulation/robotiq/robotiq_85_gripper.transmission.xacro
+[2.223s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/manipulation/jaco
+[2.223s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/manipulation/jaco/jaco.transmission.xacro
+[2.223s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/manipulation/jaco/jaco_7dof.transmission.xacro
+[2.223s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/manipulation/jaco/jaco_7dof.urdf.xacro
+[2.223s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/manipulation/jaco/jaco.urdf.xacro
+[2.223s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/manipulation/kinova_grippers
+[2.223s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/manipulation/kinova_grippers/kg2_gripper.urdf.xacro
+[2.229s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/manipulation/kinova_grippers/kg3_gripper.urdf.xacro
+[2.229s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/manipulation/kinova_grippers/kg3_gripper.transmission.xacro
+[2.233s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/manipulation/kinova_grippers/kg2_gripper.transmission.xacro
+[2.233s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/movo2.urdf
+[2.234s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/movo_components
+[2.234s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/movo_components/movo_body.urdf.xacro
+[2.234s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/movo_components/movo_pan_tilt.urdf.xacro
+[2.234s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/movo_components/proto2_arm_mount.urdf.xacro
+[2.234s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/movo_components/movo_base.urdf.xacro
+[2.234s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/movo_components/proto2_base.urdf.xacro
+[2.234s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/movo_components/proto2_frame.urdf.xacro
+[2.235s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/sensors
+[2.235s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/sensors/sick_tim.urdf.xacro
+[2.235s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/sensors/kinect_one_sensor.urdf.xacro
+[2.235s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/pan_tilt_stand_alone.urdf.xacro
+[2.235s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/urdf/movo.urdf.xacro
+[2.235s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes
+[2.235s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation
+[2.235s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/robotiq
+[2.235s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/robotiq/collision
+[2.235s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/robotiq/collision/robotiq_85_finger_tip_link.stl
+[2.235s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/robotiq/collision/robotiq_85_finger_link.stl
+[2.236s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/robotiq/collision/robotiq_85_inner_knuckle_link.stl
+[2.236s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/robotiq/collision/robotiq_85_base_link.stl
+[2.240s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/robotiq/collision/kinova_robotiq_coupler.stl
+[2.243s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/robotiq/collision/robotiq_85_knuckle_link.stl
+[2.244s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/robotiq/visual
+[2.244s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/robotiq/visual/robotiq_85_finger_tip_link.dae
+[2.248s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/robotiq/visual/robotiq_85_finger_link.dae
+[2.253s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/robotiq/visual/robotiq_85_base_link.dae
+[2.274s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/robotiq/visual/robotiq_85_inner_knuckle_link.dae
+[2.276s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/robotiq/visual/robotiq_85_knuckle_link.dae
+[2.277s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/robotiq/visual/kinova_robotiq_coupler.dae
+[2.281s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco
+[2.282s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/collision
+[2.282s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/collision/wrist_spherical_1.stl
+[2.284s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/collision/base.stl
+[2.287s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/collision/kinova_actuator_gearing.stl
+[2.296s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/collision/arm_half_1.stl
+[2.297s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/collision/shoulder_7dof.stl
+[2.300s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/collision/wrist_spherical_2.stl
+[2.302s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/collision/forearm.stl
+[2.308s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/collision/upper_arm.stl
+[2.315s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/collision/base_7dof.stl
+[2.319s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/collision/forearm_7dof.stl
+[2.326s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/collision/arm_half_2.stl
+[2.329s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/collision/shoulder.stl
+[2.340s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/collision/wrist_2.stl
+[2.343s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/collision/wrist_1.stl
+[2.350s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/visual
+[2.351s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/visual/forearm_7dof.dae
+[2.361s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/visual/wrist_1.dae
+[2.366s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/visual/arm_half_1.dae
+[2.373s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/visual/kinova_actuator_gearing.dae
+[2.384s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/visual/shoulder.dae
+[2.393s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/visual/wrist_spherical_1.dae
+[2.402s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/visual/forearm.dae
+[2.414s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/visual/arm_half_2.dae
+[2.419s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/visual/wrist_2.dae
+[2.424s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/visual/base_7dof.dae
+[2.443s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/visual/upper_arm.dae
+[2.455s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/visual/shoulder_7dof.dae
+[2.456s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/visual/base.dae
+[2.458s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/jaco/visual/wrist_spherical_2.dae
+[2.465s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/kinova_grippers
+[2.470s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/kinova_grippers/collision
+[2.470s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/kinova_grippers/collision/finger_knuckle.stl
+[2.480s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/kinova_grippers/collision/kg2_base_link.stl
+[2.506s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/kinova_grippers/collision/finger_tip.stl
+[2.509s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/kinova_grippers/collision/kg3_base_link.stl
+[2.559s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/kinova_grippers/visual
+[2.559s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/kinova_grippers/visual/finger_knuckle.dae
+[2.582s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/kinova_grippers/visual/kg2_base_link.dae
+[2.633s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/kinova_grippers/visual/finger_tip.dae
+[2.645s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/manipulation/kinova_grippers/visual/kg3_base_link.dae
+[2.723s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/pan_tilt
+[2.723s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/pan_tilt/collision
+[2.723s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/pan_tilt/collision/tilt_link.stl
+[2.741s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/pan_tilt/collision/pan_link.stl
+[2.750s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/pan_tilt/collision/pan_tilt_base.stl
+[2.755s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/pan_tilt/visual
+[2.755s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/pan_tilt/visual/pan_link.dae
+[2.765s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/pan_tilt/visual/pan_tilt_base.dae
+[2.772s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/pan_tilt/visual/tilt_link.dae
+[2.804s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/movo_components
+[2.804s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/movo_components/collision
+[2.805s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/movo_components/collision/movo_fixed_body_collision.stl
+[2.811s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/movo_components/collision/movo_upper_body_collision.stl
+[2.814s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/movo_components/collision/vector_base_collision.stl
+[2.815s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/movo_components/visual
+[2.815s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/movo_components/visual/vector_base.dae
+[3.000s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/movo_components/visual/movo_moving_payload.dae
+[3.039s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/movo_components/visual/movo_fixed_payload.dae
+[3.050s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/sensors
+[3.057s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/sensors/collision
+[3.057s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/sensors/collision/kinect_one_raw_shape_collision.STL
+[3.057s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/sensors/collision/kinect_one_collision.stl
+[3.064s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/sensors/visual
+[3.064s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/sensors/visual/sick_tim.dae
+[3.075s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/sensors/visual/kinect_one.dae
+[3.081s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/movo_body
+[3.081s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/movo_body/movo_mid_body.dae
+[3.083s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/movo_body/movo_upper_body.dae
+[3.158s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/meshes/movo_body/movo_lower_body.dae
+[3.183s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/launch
+[3.183s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/launch/display.launch.py
+[3.184s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/ament_index/resource_index/package_run_dependencies/movo_description
+[3.193s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/ament_index/resource_index/parent_prefix_path/movo_description
+[3.193s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/environment/ament_prefix_path.sh
+[3.193s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/environment/ament_prefix_path.dsv
+[3.193s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/environment/path.sh
+[3.193s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/environment/path.dsv
+[3.194s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/local_setup.bash
+[3.195s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/local_setup.sh
+[3.195s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/local_setup.zsh
+[3.195s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/local_setup.dsv
+[3.195s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/package.dsv
+[3.195s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/ament_index/resource_index/packages/movo_description
+[3.196s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/cmake/movo_descriptionConfig.cmake
+[3.198s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/cmake/movo_descriptionConfig-version.cmake
+[3.201s] -- Installing: /home/movo_base/movobase_ws/install/movo_description/share/movo_description/package.xml
+[3.222s] Invoked command in '/home/movo_base/movobase_ws/build/movo_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/movo_base/movobase_ws/install/movo_nav:/home/movo_base/movobase_ws/install/movo_base_motor_control:/home/movo_base/movobase_ws/install/joy_to_twist:/home/movo_base/movobase_ws/src/install/movo_base_motor_control:/home/movo_base/movobase_ws/src/install/joy_to_twist:/opt/ros/humble /usr/bin/cmake --install /home/movo_base/movobase_ws/build/movo_description

@@ -1,0 +1,56 @@
+[1.710s] Invoking command in '/home/movo_base/movobase_ws/src/movo_base_motor_control': PYTHONPATH=/home/movo_base/movobase_ws/build/movo_base_motor_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/movo_base/movobase_ws/install/movo_base_motor_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/movo_base_motor_control build --build-base /home/movo_base/movobase_ws/build/movo_base_motor_control/build install --record /home/movo_base/movobase_ws/build/movo_base_motor_control/install.log --single-version-externally-managed install_data
+[2.307s] running egg_info
+[2.311s] creating ../../build/movo_base_motor_control/movo_base_motor_control.egg-info
+[2.311s] writing ../../build/movo_base_motor_control/movo_base_motor_control.egg-info/PKG-INFO
+[2.311s] writing dependency_links to ../../build/movo_base_motor_control/movo_base_motor_control.egg-info/dependency_links.txt
+[2.311s] writing entry points to ../../build/movo_base_motor_control/movo_base_motor_control.egg-info/entry_points.txt
+[2.311s] writing requirements to ../../build/movo_base_motor_control/movo_base_motor_control.egg-info/requires.txt
+[2.311s] writing top-level names to ../../build/movo_base_motor_control/movo_base_motor_control.egg-info/top_level.txt
+[2.311s] writing manifest file '../../build/movo_base_motor_control/movo_base_motor_control.egg-info/SOURCES.txt'
+[2.314s] reading manifest file '../../build/movo_base_motor_control/movo_base_motor_control.egg-info/SOURCES.txt'
+[2.315s] writing manifest file '../../build/movo_base_motor_control/movo_base_motor_control.egg-info/SOURCES.txt'
+[2.315s] running build
+[2.315s] running build_py
+[2.315s] creating /home/movo_base/movobase_ws/build/movo_base_motor_control/build
+[2.316s] creating /home/movo_base/movobase_ws/build/movo_base_motor_control/build/lib
+[2.316s] creating /home/movo_base/movobase_ws/build/movo_base_motor_control/build/lib/movo_base_motor_control
+[2.317s] copying movo_base_motor_control/__init__.py -> /home/movo_base/movobase_ws/build/movo_base_motor_control/build/lib/movo_base_motor_control
+[2.317s] copying movo_base_motor_control/nanolib_helper.py -> /home/movo_base/movobase_ws/build/movo_base_motor_control/build/lib/movo_base_motor_control
+[2.317s] copying movo_base_motor_control/motor_manager.py -> /home/movo_base/movobase_ws/build/movo_base_motor_control/build/lib/movo_base_motor_control
+[2.318s] copying movo_base_motor_control/nanolib_helper copy.py -> /home/movo_base/movobase_ws/build/movo_base_motor_control/build/lib/movo_base_motor_control
+[2.318s] copying movo_base_motor_control/mecanum_controller.py -> /home/movo_base/movobase_ws/build/movo_base_motor_control/build/lib/movo_base_motor_control
+[2.318s] copying movo_base_motor_control/omni_wheel_node.py -> /home/movo_base/movobase_ws/build/movo_base_motor_control/build/lib/movo_base_motor_control
+[2.319s] running install
+[2.319s] running install_lib
+[2.319s] creating /home/movo_base/movobase_ws/install/movo_base_motor_control/lib/python3.10/site-packages/movo_base_motor_control
+[2.319s] copying /home/movo_base/movobase_ws/build/movo_base_motor_control/build/lib/movo_base_motor_control/nanolib_helper copy.py -> /home/movo_base/movobase_ws/install/movo_base_motor_control/lib/python3.10/site-packages/movo_base_motor_control
+[2.323s] copying /home/movo_base/movobase_ws/build/movo_base_motor_control/build/lib/movo_base_motor_control/__init__.py -> /home/movo_base/movobase_ws/install/movo_base_motor_control/lib/python3.10/site-packages/movo_base_motor_control
+[2.323s] copying /home/movo_base/movobase_ws/build/movo_base_motor_control/build/lib/movo_base_motor_control/mecanum_controller.py -> /home/movo_base/movobase_ws/install/movo_base_motor_control/lib/python3.10/site-packages/movo_base_motor_control
+[2.323s] copying /home/movo_base/movobase_ws/build/movo_base_motor_control/build/lib/movo_base_motor_control/omni_wheel_node.py -> /home/movo_base/movobase_ws/install/movo_base_motor_control/lib/python3.10/site-packages/movo_base_motor_control
+[2.323s] copying /home/movo_base/movobase_ws/build/movo_base_motor_control/build/lib/movo_base_motor_control/nanolib_helper.py -> /home/movo_base/movobase_ws/install/movo_base_motor_control/lib/python3.10/site-packages/movo_base_motor_control
+[2.323s] copying /home/movo_base/movobase_ws/build/movo_base_motor_control/build/lib/movo_base_motor_control/motor_manager.py -> /home/movo_base/movobase_ws/install/movo_base_motor_control/lib/python3.10/site-packages/movo_base_motor_control
+[2.325s] byte-compiling /home/movo_base/movobase_ws/install/movo_base_motor_control/lib/python3.10/site-packages/movo_base_motor_control/nanolib_helper copy.py to nanolib_helper copy.cpython-310.pyc
+[2.325s] byte-compiling /home/movo_base/movobase_ws/install/movo_base_motor_control/lib/python3.10/site-packages/movo_base_motor_control/__init__.py to __init__.cpython-310.pyc
+[2.325s] byte-compiling /home/movo_base/movobase_ws/install/movo_base_motor_control/lib/python3.10/site-packages/movo_base_motor_control/mecanum_controller.py to mecanum_controller.cpython-310.pyc
+[2.325s] byte-compiling /home/movo_base/movobase_ws/install/movo_base_motor_control/lib/python3.10/site-packages/movo_base_motor_control/omni_wheel_node.py to omni_wheel_node.cpython-310.pyc
+[2.325s] byte-compiling /home/movo_base/movobase_ws/install/movo_base_motor_control/lib/python3.10/site-packages/movo_base_motor_control/nanolib_helper.py to nanolib_helper.cpython-310.pyc
+[2.327s] byte-compiling /home/movo_base/movobase_ws/install/movo_base_motor_control/lib/python3.10/site-packages/movo_base_motor_control/motor_manager.py to motor_manager.cpython-310.pyc
+[2.329s] running install_data
+[2.329s] creating /home/movo_base/movobase_ws/install/movo_base_motor_control/share/ament_index
+[2.329s] creating /home/movo_base/movobase_ws/install/movo_base_motor_control/share/ament_index/resource_index
+[2.330s] creating /home/movo_base/movobase_ws/install/movo_base_motor_control/share/ament_index/resource_index/packages
+[2.330s] copying resource/movo_base_motor_control -> /home/movo_base/movobase_ws/install/movo_base_motor_control/share/ament_index/resource_index/packages
+[2.331s] copying package.xml -> /home/movo_base/movobase_ws/install/movo_base_motor_control/share/movo_base_motor_control
+[2.331s] creating /home/movo_base/movobase_ws/install/movo_base_motor_control/share/movo_base_motor_control/launch
+[2.331s] copying launch/2lidar.launch.py -> /home/movo_base/movobase_ws/install/movo_base_motor_control/share/movo_base_motor_control/launch
+[2.331s] copying launch/two_tim.launch.py -> /home/movo_base/movobase_ws/install/movo_base_motor_control/share/movo_base_motor_control/launch
+[2.331s] copying launch/all_sensors.launch.py -> /home/movo_base/movobase_ws/install/movo_base_motor_control/share/movo_base_motor_control/launch
+[2.331s] copying launch/omni_wheel_launch.py -> /home/movo_base/movobase_ws/install/movo_base_motor_control/share/movo_base_motor_control/launch
+[2.331s] copying launch/movo_base.launch.py -> /home/movo_base/movobase_ws/install/movo_base_motor_control/share/movo_base_motor_control/launch
+[2.331s] running install_egg_info
+[2.336s] Copying ../../build/movo_base_motor_control/movo_base_motor_control.egg-info to /home/movo_base/movobase_ws/install/movo_base_motor_control/lib/python3.10/site-packages/movo_base_motor_control-0.1.0-py3.10.egg-info
+[2.336s] running install_scripts
+[2.369s] Installing mecanum_controller script to /home/movo_base/movobase_ws/install/movo_base_motor_control/lib/movo_base_motor_control
+[2.369s] Installing omni_wheel_node script to /home/movo_base/movobase_ws/install/movo_base_motor_control/lib/movo_base_motor_control
+[2.369s] writing list of installed files to '/home/movo_base/movobase_ws/build/movo_base_motor_control/install.log'
+[2.410s] Invoked command in '/home/movo_base/movobase_ws/src/movo_base_motor_control' returned '0': PYTHONPATH=/home/movo_base/movobase_ws/build/movo_base_motor_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/movo_base/movobase_ws/install/movo_base_motor_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/movo_base_motor_control build --build-base /home/movo_base/movobase_ws/build/movo_base_motor_control/build install --record /home/movo_base/movobase_ws/build/movo_base_motor_control/install.log --single-version-externally-managed install_data

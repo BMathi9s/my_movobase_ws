@@ -1,0 +1,1 @@
+/home/movo_base/movobase_ws/src/realsense-ros/realsense2_camera_msgs/msg/IMUInfo.msg

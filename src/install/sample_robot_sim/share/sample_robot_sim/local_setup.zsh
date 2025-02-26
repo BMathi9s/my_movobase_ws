@@ -1,0 +1,1 @@
+/home/movo_base/movobase_ws/src/build/sample_robot_sim/ament_cmake_environment_hooks/local_setup.zsh

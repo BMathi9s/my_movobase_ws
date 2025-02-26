@@ -1,0 +1,36 @@
+running develop
+Removing /home/movo_base/movobase_ws/install/movo_nav/lib/python3.10/site-packages/movo-nav.egg-link (link to .)
+running egg_info
+writing ../../build/movo_nav/movo_nav.egg-info/PKG-INFO
+writing dependency_links to ../../build/movo_nav/movo_nav.egg-info/dependency_links.txt
+writing entry points to ../../build/movo_nav/movo_nav.egg-info/entry_points.txt
+writing requirements to ../../build/movo_nav/movo_nav.egg-info/requires.txt
+writing top-level names to ../../build/movo_nav/movo_nav.egg-info/top_level.txt
+reading manifest file '../../build/movo_nav/movo_nav.egg-info/SOURCES.txt'
+writing manifest file '../../build/movo_nav/movo_nav.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+creating /home/movo_base/movobase_ws/install/movo_nav/lib/python3.10/site-packages/movo_nav
+copying /home/movo_base/movobase_ws/build/movo_nav/build/lib/movo_nav/__init__.py -> /home/movo_base/movobase_ws/install/movo_nav/lib/python3.10/site-packages/movo_nav
+copying /home/movo_base/movobase_ws/build/movo_nav/build/lib/movo_nav/dual_scan_merger.py -> /home/movo_base/movobase_ws/install/movo_nav/lib/python3.10/site-packages/movo_nav
+byte-compiling /home/movo_base/movobase_ws/install/movo_nav/lib/python3.10/site-packages/movo_nav/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/movo_base/movobase_ws/install/movo_nav/lib/python3.10/site-packages/movo_nav/dual_scan_merger.py to dual_scan_merger.cpython-310.pyc
+running install_data
+copying resource/movo_nav -> /home/movo_base/movobase_ws/install/movo_nav/share/ament_index/resource_index/packages
+copying package.xml -> /home/movo_base/movobase_ws/install/movo_nav/share/movo_nav
+copying launch/realseanse_2d_slam_launch.py -> /home/movo_base/movobase_ws/install/movo_nav/share/movo_nav/launch
+copying launch/full_2d_lidar_slam_launch.py -> /home/movo_base/movobase_ws/install/movo_nav/share/movo_nav/launch
+copying launch/single_2d_lidar_slam_with_urdf_launch.py -> /home/movo_base/movobase_ws/install/movo_nav/share/movo_nav/launch
+copying launch/front_lidar_slam_launch.py -> /home/movo_base/movobase_ws/install/movo_nav/share/movo_nav/launch
+copying launch/lidar_slam_launch.py -> /home/movo_base/movobase_ws/install/movo_nav/share/movo_nav/launch
+copying urdf/sensor_d435i.xacro -> /home/movo_base/movobase_ws/install/movo_nav/share/movo_nav/urdf
+copying config/slam_toolbox_params.yaml -> /home/movo_base/movobase_ws/install/movo_nav/share/movo_nav/config
+copying config/mapper_params_online_sync.yaml -> /home/movo_base/movobase_ws/install/movo_nav/share/movo_nav/config
+copying config/dual_lidar_slam_param.yaml -> /home/movo_base/movobase_ws/install/movo_nav/share/movo_nav/config
+running install_egg_info
+Copying ../../build/movo_nav/movo_nav.egg-info to /home/movo_base/movobase_ws/install/movo_nav/lib/python3.10/site-packages/movo_nav-0.0.0-py3.10.egg-info
+running install_scripts
+Installing dual_scan_merger script to /home/movo_base/movobase_ws/install/movo_nav/lib/movo_nav
+writing list of installed files to '/home/movo_base/movobase_ws/build/movo_nav/install.log'

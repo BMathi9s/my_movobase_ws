@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot name="realsense2_camera" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- Allow external argument to use nominal extrinsics if desired -->
+  <xacro:arg name="use_nominal_extrinsics" default="false"/>
+
+  <!-- Include the official realsense2_description xacro for D435i -->
+  <!-- Make sure you have realsense2_description installed -->
+  <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/>
+
+  <!-- Create a dummy base_link just to attach camera if you have no other robot description -->
+  <link name="base_link"/>
+
+  <!-- Instantiate the sensor macro with a parent of base_link -->
+  <xacro:sensor_d435i parent="base_link" use_nominal_extrinsics="$(arg use_nominal_extrinsics)">
+    <!-- Adjust origin if needed -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:sensor_d435i>
+</robot>

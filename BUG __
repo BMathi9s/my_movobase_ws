@@ -1,0 +1,10 @@
+
+
+
+Safety button, then Main switch off - safety switch on, mian on -> re-launch => danger!!! remember old velocity
+
+Fix 
+- Set decelerate
+- set button to acceleratare
+- Set/send a init at 0 velocity
+- add timestamp with no new order

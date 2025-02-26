@@ -1,0 +1,37 @@
+[1.444s] Invoking command in '/home/movo_base/movobase_ws/src/joy_to_twist': PYTHONPATH=/home/movo_base/movobase_ws/build/joy_to_twist/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/movo_base/movobase_ws/install/joy_to_twist/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/joy_to_twist build --build-base /home/movo_base/movobase_ws/build/joy_to_twist/build install --record /home/movo_base/movobase_ws/build/joy_to_twist/install.log --single-version-externally-managed install_data
+[2.042s] running egg_info
+[2.042s] creating ../../build/joy_to_twist/joy_to_twist.egg-info
+[2.042s] writing ../../build/joy_to_twist/joy_to_twist.egg-info/PKG-INFO
+[2.043s] writing dependency_links to ../../build/joy_to_twist/joy_to_twist.egg-info/dependency_links.txt
+[2.044s] writing entry points to ../../build/joy_to_twist/joy_to_twist.egg-info/entry_points.txt
+[2.044s] writing requirements to ../../build/joy_to_twist/joy_to_twist.egg-info/requires.txt
+[2.044s] writing top-level names to ../../build/joy_to_twist/joy_to_twist.egg-info/top_level.txt
+[2.047s] writing manifest file '../../build/joy_to_twist/joy_to_twist.egg-info/SOURCES.txt'
+[2.047s] reading manifest file '../../build/joy_to_twist/joy_to_twist.egg-info/SOURCES.txt'
+[2.048s] writing manifest file '../../build/joy_to_twist/joy_to_twist.egg-info/SOURCES.txt'
+[2.048s] running build
+[2.048s] running build_py
+[2.048s] creating /home/movo_base/movobase_ws/build/joy_to_twist/build
+[2.048s] creating /home/movo_base/movobase_ws/build/joy_to_twist/build/lib
+[2.048s] creating /home/movo_base/movobase_ws/build/joy_to_twist/build/lib/joy_to_twist
+[2.048s] copying joy_to_twist/__init__.py -> /home/movo_base/movobase_ws/build/joy_to_twist/build/lib/joy_to_twist
+[2.048s] copying joy_to_twist/joy_to_twist_node.py -> /home/movo_base/movobase_ws/build/joy_to_twist/build/lib/joy_to_twist
+[2.049s] running install
+[2.049s] running install_lib
+[2.054s] creating /home/movo_base/movobase_ws/install/joy_to_twist/lib/python3.10/site-packages/joy_to_twist
+[2.054s] copying /home/movo_base/movobase_ws/build/joy_to_twist/build/lib/joy_to_twist/__init__.py -> /home/movo_base/movobase_ws/install/joy_to_twist/lib/python3.10/site-packages/joy_to_twist
+[2.054s] copying /home/movo_base/movobase_ws/build/joy_to_twist/build/lib/joy_to_twist/joy_to_twist_node.py -> /home/movo_base/movobase_ws/install/joy_to_twist/lib/python3.10/site-packages/joy_to_twist
+[2.054s] byte-compiling /home/movo_base/movobase_ws/install/joy_to_twist/lib/python3.10/site-packages/joy_to_twist/__init__.py to __init__.cpython-310.pyc
+[2.054s] byte-compiling /home/movo_base/movobase_ws/install/joy_to_twist/lib/python3.10/site-packages/joy_to_twist/joy_to_twist_node.py to joy_to_twist_node.cpython-310.pyc
+[2.055s] running install_data
+[2.055s] creating /home/movo_base/movobase_ws/install/joy_to_twist/share/ament_index
+[2.055s] creating /home/movo_base/movobase_ws/install/joy_to_twist/share/ament_index/resource_index
+[2.055s] creating /home/movo_base/movobase_ws/install/joy_to_twist/share/ament_index/resource_index/packages
+[2.055s] copying resource/joy_to_twist -> /home/movo_base/movobase_ws/install/joy_to_twist/share/ament_index/resource_index/packages
+[2.055s] copying package.xml -> /home/movo_base/movobase_ws/install/joy_to_twist/share/joy_to_twist
+[2.056s] running install_egg_info
+[2.058s] Copying ../../build/joy_to_twist/joy_to_twist.egg-info to /home/movo_base/movobase_ws/install/joy_to_twist/lib/python3.10/site-packages/joy_to_twist-0.0.1-py3.10.egg-info
+[2.061s] running install_scripts
+[2.099s] Installing joy_to_twist_node script to /home/movo_base/movobase_ws/install/joy_to_twist/lib/joy_to_twist
+[2.100s] writing list of installed files to '/home/movo_base/movobase_ws/build/joy_to_twist/install.log'
+[2.150s] Invoked command in '/home/movo_base/movobase_ws/src/joy_to_twist' returned '0': PYTHONPATH=/home/movo_base/movobase_ws/build/joy_to_twist/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/movo_base/movobase_ws/install/joy_to_twist/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/joy_to_twist build --build-base /home/movo_base/movobase_ws/build/joy_to_twist/build install --record /home/movo_base/movobase_ws/build/joy_to_twist/install.log --single-version-externally-managed install_data
