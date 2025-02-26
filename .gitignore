@@ -1,0 +1,9 @@
+# Ignore build and install directories
+build/
+install/
+src/build/
+kinova-movo/
+src/sick_scan_xd/
+src/realsense-ros/
+*.a
+*.so
