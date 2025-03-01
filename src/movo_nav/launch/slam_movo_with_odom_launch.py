@@ -11,6 +11,22 @@ def generate_launch_description():
     movo_description_share = get_package_share_directory('movo_description')
     movo_nav_share = get_package_share_directory('movo_nav')
     
+     # -----------------------------------------------------------
+    # 0. launch movo mouvemnt
+    # -----------------------------------------------------------
+    x_box_movo_base_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(
+                get_package_share_directory('movo_base_motor_control'),
+                'launch',
+                'x_box_movo_base.launch.py'
+            )
+        )
+    )
+
+    
+    
+    
     # -----------------------------------------------------------
     # 1. Include the robot display (mod_display.launch.py)
     # -----------------------------------------------------------
@@ -55,6 +71,46 @@ def generate_launch_description():
     )
     
 
+
+    # -----------------------------------------------------------
+    # 4. IMU Node
+    # -----------------------------------------------------------
+    # init imu
+    imu_node = Node(
+        package='tm_imu',
+        executable='transducer_m_imu',
+        name='tm_imu',
+        output='screen',
+        parameters=[{
+            'imu_baudrate': 115200,
+            'imu_port': '/dev/ttyACM0',
+            'imu_frame_id': 'imu_link',
+            'parent_frame_id': 'base_chassis_link',  # Now using chassis as the parent
+            'timer_period': 5,
+            'transform': [0.0, 0.0, 0.9, 0.0, 0.0, 0.0]  # Set the 60 cm offset here
+        }],
+        remappings=[]
+    )
+    
+    
+    imu_tf = Node(
+    package='tf2_ros',
+    executable='static_transform_publisher',
+    name='imu_tf',
+    arguments=['0', '0', '0.6', '0', '0', '0', 'base_chassis_link', 'imu_link']
+    )
+
+
+    
+    imu_to_odom_node = Node(
+    package='movo_nav',
+    executable='imu_to_odom',
+    name='imu_to_odom',
+    output='screen'
+    )
+
+
+    
     
     odom_tf = Node(
         package='tf2_ros',
@@ -65,7 +121,7 @@ def generate_launch_description():
     # -----------------------------------------------------------
     # 3. SLAM Toolbox Node with Dual Lidar Parameters
     # -----------------------------------------------------------
-    slam_params_file = os.path.join(movo_nav_share, 'config', 'single_lidar_slam_param.yaml')
+    slam_params_file = os.path.join(movo_nav_share, 'config', 'movo_slam.yaml')
     slam_node = TimerAction(
         period=2.0,  # delay of 2 seconds o fix the initil timing issue
         actions=[
@@ -81,8 +137,12 @@ def generate_launch_description():
 
     
     return LaunchDescription([
+        x_box_movo_base_launch,
         display_launch,
         front_lidar_node,
+        imu_node,
+        # imu_tf,
+        imu_to_odom_node,
         odom_tf,
         slam_node
     ])

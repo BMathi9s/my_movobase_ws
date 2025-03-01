@@ -130,7 +130,7 @@ class MotorManager:
             for device_id, name in zip(device_ids, motor_names)
         ]
 
-    def setup_motors(self, velocity_mps=0.0, acceleration_mps2=2.0):
+    def setup_motors(self, velocity_mps=0.0, acceleration_mps2=1.0):
         """
         Initializes and sets up all motors with a default velocity and acceleration.
 
@@ -165,6 +165,15 @@ class MotorManager:
         """
         for motor in self.motors:
             motor.set_acceleration(acceleration_mps2)
+            
+    def set_all_deceleration(self, deceleration_mps2):
+        """
+        Sets deceleration for all motors.
+        :param deceleration_mps2: Deceleration limit in m/s².
+        """
+        for motor in self.motors:
+            motor.set_deceleration(deceleration_mps2)
+
 
     def stop_motors(self):
         """Stops all motors immediately."""

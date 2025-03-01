@@ -296,7 +296,9 @@ void TMSerial::PublishTransform()
 {
     geometry_msgs::msg::TransformStamped transform_;
     transform_.header.stamp = this->get_clock()->now();
-    transform_.header.frame_id = "world";
+    // transform_.header.frame_id = "world";
+    transform_.header.frame_id = this->get_parameter("parent_frame_id").as_string();
+    // changes made
     transform_.child_frame_id = this->get_parameter("imu_frame_id").as_string();
     transform_.transform.translation.x = this->get_parameter("transform").as_double_array()[0];
     transform_.transform.translation.y = this->get_parameter("transform").as_double_array()[1];

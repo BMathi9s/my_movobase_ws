@@ -31,14 +31,27 @@ def generate_launch_description():
             'scanner_type': 'sick_tim_5xx',
             'hostname': '192.168.1.10',
             'frame_id': 'front_laser_link',
-            'tf_base_frame_id': 'odom', # or base_chassis_link?
+            'tf_base_frame_id': 'front_laser_link',
+            'tf_publish_rate': 0.0,
+              
+            # # Set the scan angle range:
+            # 'min_ang': 0.785398163,   # 45 degrees in radians
+            # 'max_ang': 4.27605667,    # 245 degrees in radians
+            # # Set the range (distance) limits:
+            # 'range_min': 0.1,         # Minimum valid range (in meters)
+            # 'range_max': 30.0,        # Maximum valid range (in meters)
+            # # Additional optional parameters:
+            # 'intensity': True,
+            # # You can add other parameters here as needed:
+            # # 'use_binary_protocol': True,
+            # # 'range_filter_handling': 0,
+            # # etc.
         }],
         remappings=[
             ('sick_tim_5xx/scan', '/lidar_front/scan'),
             ('cloud', '/lidar_front/cloud')
         ]
     )
-    
     # -----------------------------------------------------------
     # 3. Rear Lidar Node (using rear_laser_link)
     # -----------------------------------------------------------
@@ -51,7 +64,21 @@ def generate_launch_description():
             'scanner_type': 'sick_tim_5xx',
             'hostname': '192.168.1.11',
             'frame_id': 'rear_laser_link',
-            'tf_base_frame_id': 'odom',
+            'tf_base_frame_id': 'rear_laser_link',
+            'tf_publish_rate': 0.0,
+
+            # # Set the scan angle range:
+            # 'min_ang': 0.785398163,   # 45 degrees in radians
+            # 'max_ang': 4.27605667,    # 245 degrees in radians
+            # # Set the range (distance) limits:
+            # 'range_min': 0.1,         # Minimum valid range (in meters)
+            # 'range_max': 30.0,        # Maximum valid range (in meters)
+            # # Additional optional parameters:
+            # 'intensity': True,
+            # # You can add other parameters here as needed:
+            # # 'use_binary_protocol': True,
+            # # 'range_filter_handling': 0,
+            # # etc.
         }],
         remappings=[
             ('sick_tim_5xx/scan', '/lidar_back/scan'),

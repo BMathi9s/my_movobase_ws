@@ -1,0 +1,41 @@
+1. imu_data (sensor_msgs/msg/Imu)
+
+    What it Contains:
+    This topic publishes the standard IMU data in a single message. It includes:
+        Orientation: Reported as a quaternion (filled in via the EP_CMD_Q_S1_E_ or EP_CMD_COMBO_ cases).
+        Angular Velocity: Gyroscope readings (from EP_CMD_Raw_GYRO_ACC_MAG_ or EP_CMD_COMBO_).
+        Linear Acceleration: Accelerometer data (again from EP_CMD_Raw_GYRO_ACC_MAG_ or EP_CMD_COMBO_).
+        Covariance Matrices: These are populated with fixed values (0.1 for each element), which you might later adjust according to your sensor’s accuracy.
+
+    Usage in SLAM:
+    This topic is typically used as the primary source of inertial data for sensor fusion and odometry estimation in SLAM systems.
+
+2. imu_data_mag (sensor_msgs/msg/MagneticField)
+
+    What it Contains:
+    This topic is dedicated to the magnetometer data:
+        Magnetic Field: The x, y, and z components are filled with magnetometer readings (again coming from EP_CMD_Raw_GYRO_ACC_MAG_ or EP_CMD_COMBO_).
+
+    Usage in SLAM:
+    Magnetometer data is often used to help correct heading (yaw) drift and improve overall orientation estimates when fused with the other sensor data.
+
+3. imu_data_rpy (sensor_msgs/msg/MagneticField)
+
+    What it Contains:
+    Although the message type is MagneticField, this topic is repurposed to provide Euler angles:
+        Roll, Pitch, Yaw: The node assigns the roll, pitch, and yaw values to the magnetic_field.x, .y, and .z fields respectively (populated in the EP_CMD_RPY_ or EP_CMD_COMBO_ cases).
+
+    Usage Considerations:
+        Non-Standard Use: The use of a MagneticField message to publish Euler angles is a bit unconventional since that message is normally reserved for magnetic field data.
+        Practicality: It might be done for convenience or to avoid creating a custom message type, especially if the consuming nodes are aware of this repurposing.
+        Visualization/Debugging: This topic can be very useful if you want to monitor the IMU’s computed orientation in roll, pitch, and yaw directly.
+
+Additional Context from Your Code
+
+    The node uses a timer to periodically read data from the sensor via the serial port.
+    Depending on the packet type (as determined by header.cmd), it updates the appropriate fields in the messages.
+    For example:
+        Raw Data Packets (EP_CMD_Raw_GYRO_ACC_MAG_): Fill in gyroscope, accelerometer, and magnetometer readings.
+        Quaternion Packets (EP_CMD_Q_S1_E_): Update the quaternion in the IMU message.
+        RPY Packets (EP_CMD_RPY_): Update the repurposed MagneticField message with roll, pitch, and yaw values.
+    Covariance matrices are set uniformly (with value 0.1), which is a placeholder until you might adjust these based on sensor noise characteristics.

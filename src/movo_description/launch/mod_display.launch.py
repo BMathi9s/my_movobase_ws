@@ -38,18 +38,8 @@ def generate_launch_description():
         arguments=['0', '0', '0.9', '0', '0', '0', 'linear_actuator_fixed_link', 'linear_actuator_link']
     )
 
-    # Launch RViz2 with a pre-configured config file that already has a RobotModel display.
-    # Make sure that the config file's RobotModel display is set to use the 'robot_description' parameter.
-    rviz_config_file = os.path.join(pkg_share, 'rviz', 'movo_display.rviz')
-    rviz_node = Node(
-        package='rviz2',
-        executable='rviz2',
-        arguments=['-d', rviz_config_file],
-        output='screen'
-    )
 
     return LaunchDescription([
         robot_state_publisher_node,
         static_transform_node,
-        rviz_node,
     ])

@@ -17,8 +17,10 @@ setup(
         # Install our launch files
         ('share/' + package_name + '/launch', ['launch/full_2d_lidar_slam_launch.py']),
         ('share/' + package_name + '/launch', ['launch/single_2d_lidar_slam_with_urdf_launch.py']),
-        ('share/' + package_name + '/launch', ['launch/front_lidar_slam_launch.py']),
+        ('share/' + package_name + '/launch', ['launch/ex_front_lidar_slam_launch.py']),
         ('share/' + package_name + '/launch', ['launch/lidar_slam_launch.py']),
+        ('share/' + package_name + '/launch', ['launch/slam_movo_with_odom_launch.py']),
+        ('share/' + package_name + '/launch', ['launch/movo_nav2_launch.py']),
         
         # -------------- Add these lines --------------
         # Install anything in the urdf folder
@@ -47,8 +49,8 @@ setup(
     license='Apache License 2.0',
     entry_points={
         'console_scripts': [
-            # Any Python entry points go here
-            'dual_scan_merger = movo_nav.dual_scan_merger:main'
+            'dual_scan_merger = movo_nav.dual_scan_merger:main',
+            'imu_to_odom = movo_nav.imu_to_odom:main'
         ],
     },
 )

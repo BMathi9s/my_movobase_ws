@@ -1,0 +1,185 @@
+// dual_scan_merger.cpp
+#include <memory>
+#include <vector>
+#include <limits>
+#include <cmath>
+#include <mutex>
+
+#include "rclcpp/rclcpp.hpp"
+#include "sensor_msgs/msg/laser_scan.hpp"
+#include "geometry_msgs/msg/point_stamped.hpp"
+
+#include "tf2_ros/transform_listener.h"
+#include "tf2_ros/buffer.h"
+#include "tf2_geometry_msgs/tf2_geometry_msgs.h"
+
+#include "message_filters/subscriber.h"
+#include "message_filters/sync_policies/approximate_time.h"
+#include "message_filters/synchronizer.h"
+
+using namespace std::chrono_literals;
+
+class DualScanMerger : public rclcpp::Node
+{
+public:
+  DualScanMerger() : Node("dual_scan_merger"),
+                     tf_buffer_(this->get_clock()),
+                     tf_listener_(tf_buffer_)
+  {
+    // Declare parameters
+    this->declare_parameter<std::string>("output_frame", "base_link");
+    this->declare_parameter<std::string>("merged_scan_topic", "/merged_scan");
+    this->declare_parameter<std::vector<std::string>>("scan_topics", {"/lidar_front/scan", "/lidar_back/scan"});
+    // Trim angle of 45 degrees (in radians)
+    trim_angle_ = 0.785398;  // 45° in radians
+
+    output_frame_ = this->get_parameter("output_frame").as_string();
+    merged_scan_topic_ = this->get_parameter("merged_scan_topic").as_string();
+
+    // Setup publisher for merged scan
+    merged_scan_pub_ = this->create_publisher<sensor_msgs::msg::LaserScan>(merged_scan_topic_, 10);
+
+    // Setup message_filters subscribers for the two scan topics.
+    // We assume that the first topic in scan_topics is the front lidar and the second is the rear.
+    auto scan_topics = this->get_parameter("scan_topics").as_string_array();
+    if (scan_topics.size() != 2) {
+      RCLCPP_ERROR(this->get_logger(), "Expected exactly 2 scan topics.");
+      rclcpp::shutdown();
+      return;
+    }
+    front_sub_.subscribe(this, scan_topics[0]);
+    rear_sub_.subscribe(this, scan_topics[1]);
+
+    // ApproximateTime synchronizer
+    sync_ = std::make_shared<message_filters::Synchronizer<SyncPolicy>>(SyncPolicy(10), front_sub_, rear_sub_);
+    sync_->registerCallback(&DualScanMerger::scanCallback, this);
+
+    RCLCPP_INFO(this->get_logger(), "DualScanMerger node started.");
+  }
+
+private:
+  // Define a simple struct for transformed points
+  struct Point2D {
+    double x;
+    double y;
+  };
+
+  // Typedef for the synchronizer policy
+  typedef message_filters::sync_policies::ApproximateTime<sensor_msgs::msg::LaserScan,
+                                                          sensor_msgs::msg::LaserScan>
+    SyncPolicy;
+  
+  void scanCallback(const sensor_msgs::msg::LaserScan::ConstSharedPtr front_scan,
+                    const sensor_msgs::msg::LaserScan::ConstSharedPtr rear_scan)
+  {
+    // Vectors to store transformed points from each scan
+    std::vector<Point2D> merged_points;
+
+    // Process both scans
+    processScan(front_scan, merged_points);
+    processScan(rear_scan, merged_points);
+
+    // Create merged LaserScan message (covering 360°)
+    sensor_msgs::msg::LaserScan merged_scan;
+    merged_scan.header.stamp = this->now();
+    merged_scan.header.frame_id = output_frame_;
+
+    // Set the merged scan to cover full 360 degrees: [-pi, pi]
+    merged_scan.angle_min = -M_PI;
+    merged_scan.angle_max = M_PI;
+    // Choose an angular resolution (could use the minimum of both sensor resolutions)
+    merged_scan.angle_increment = 0.005;  // for example, ~0.29° per bin
+    size_t num_bins = std::ceil((merged_scan.angle_max - merged_scan.angle_min) / merged_scan.angle_increment);
+    merged_scan.ranges.assign(num_bins, std::numeric_limits<float>::infinity());
+    merged_scan.range_min = front_scan->range_min;  // assuming similar limits for both sensors
+    merged_scan.range_max = front_scan->range_max;
+
+    // For each merged point, compute its angle in the output frame and update the appropriate bin
+    for (const auto & pt : merged_points)
+    {
+      double r = std::hypot(pt.x, pt.y);
+      double angle = std::atan2(pt.y, pt.x);
+      // Determine bin index
+      int bin = static_cast<int>((angle - merged_scan.angle_min) / merged_scan.angle_increment);
+      if (bin >= 0 && static_cast<size_t>(bin) < num_bins)
+      {
+        // Use the minimum range (if overlapping)
+        if (r < merged_scan.ranges[bin])
+        {
+          merged_scan.ranges[bin] = static_cast<float>(r);
+        }
+      }
+    }
+
+    // Publish the merged scan
+    merged_scan_pub_->publish(merged_scan);
+  }
+
+  // Process a single scan: trim the edges and transform points into output_frame_
+  void processScan(const sensor_msgs::msg::LaserScan::ConstSharedPtr scan,
+                   std::vector<Point2D> & points_out)
+  {
+    // We trim the scan in the sensor's own frame: discard measurements
+    // with angles outside [angle_min + trim_angle_, angle_max - trim_angle_]
+    double trimmed_min = scan->angle_min + trim_angle_;
+    double trimmed_max = scan->angle_max - trim_angle_;
+
+    // For each measurement in the scan
+    for (size_t i = 0; i < scan->ranges.size(); ++i)
+    {
+      double angle = scan->angle_min + i * scan->angle_increment;
+      // Skip if outside the trimmed range
+      if (angle < trimmed_min || angle > trimmed_max)
+        continue;
+
+      float range = scan->ranges[i];
+      // Validate range
+      if (range < scan->range_min || range > scan->range_max)
+        continue;
+
+      // Compute the point in the sensor frame
+      geometry_msgs::msg::PointStamped pt_in, pt_out;
+      pt_in.header = scan->header;
+      pt_in.point.x = range * std::cos(angle);
+      pt_in.point.y = range * std::sin(angle);
+      pt_in.point.z = 0.0;
+
+      // Transform the point into the output frame using tf2
+      try {
+        // Use the timestamp from the scan for the transformation
+        pt_in.header.stamp = scan->header.stamp;
+        pt_out = tf_buffer_.transform(pt_in, output_frame_, tf2::durationFromSec(0.1));
+      } catch (const tf2::TransformException & ex) {
+        RCLCPP_WARN(this->get_logger(), "TF transform failed: %s", ex.what());
+        continue;
+      }
+
+      // Save the transformed point
+      points_out.push_back({pt_out.point.x, pt_out.point.y});
+    }
+  }
+
+  // Member variables
+  rclcpp::Publisher<sensor_msgs::msg::LaserScan>::SharedPtr merged_scan_pub_;
+  std::string output_frame_;
+  std::string merged_scan_topic_;
+  double trim_angle_;
+
+  // Message filters subscribers and synchronizer
+  message_filters::Subscriber<sensor_msgs::msg::LaserScan> front_sub_{nullptr};
+  message_filters::Subscriber<sensor_msgs::msg::LaserScan> rear_sub_{nullptr};
+  std::shared_ptr<message_filters::Synchronizer<SyncPolicy>> sync_;
+
+  // TF2 buffer and listener for transforms
+  tf2_ros::Buffer tf_buffer_;
+  tf2_ros::TransformListener tf_listener_;
+};
+
+int main(int argc, char ** argv)
+{
+  rclcpp::init(argc, argv);
+  auto node = std::make_shared<DualScanMerger>();
+  rclcpp::spin(node);
+  rclcpp::shutdown();
+  return 0;
+}

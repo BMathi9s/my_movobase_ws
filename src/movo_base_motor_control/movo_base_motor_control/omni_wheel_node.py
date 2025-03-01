@@ -18,6 +18,11 @@ class OmniWheelNode(Node):
         self.nanolib_helper = NanolibHelper()
         self.nanolib_helper.setup()
 
+
+        #  Default parameters
+        self.default_acceleration = 0.1  # Default acceleration in m/s²
+        self.default_deceleration = 4.4  # Default deceleration in m/s²
+        
         # Discover and open the bus hardware
         bus_hardware_ids = self.nanolib_helper.get_bus_hardware()
         if not bus_hardware_ids:
@@ -45,12 +50,16 @@ class OmniWheelNode(Node):
         self.motor_manager.setup_motors(velocity_mps=0.0, acceleration_mps2=self.default_acceleration)
 
         # 🔹 Publishers
+        
+        # Set default deceleration for all motors
+        self.motor_manager.set_all_deceleration(self.default_deceleration)
+        
         self.wheel_state_pub = self.create_publisher(Float32MultiArray, "/movo_base/wheel_states", 10)
 
         # 🔹 Subscribers
         self.create_subscription(Float32MultiArray, "/movo_base/wheel_cmds", self.cmd_vel_array_callback, 10)
         self.create_subscription(Float32MultiArray, "/movo_base/set_acceleration", self.acceleration_callback, 10)
-
+        self.create_subscription(Float32MultiArray, "/movo_base/set_deceleration", self.deceleration_callback, 10)
         # Launch monitoring thread
         self.threads = []
         t = threading.Thread(target=self.monitor_loop, daemon=True)
@@ -83,7 +92,18 @@ class OmniWheelNode(Node):
         self.motor_manager.set_all_accelerations(new_acceleration)
 
         self.get_logger().info(f"Updated acceleration to {new_acceleration:.2f} m/s² for all motors.")
+    
+    def deceleration_callback(self, msg: Float32MultiArray):
+        """
+        Callback to update deceleration for all motors.
+        Expects a single deceleration value in m/s².
+        """
+        assert len(msg.data) == 1, "Expected a single deceleration value."
+        new_deceleration = msg.data[0]
+        self.motor_manager.set_all_deceleration(new_deceleration)
+        self.get_logger().info(f"Updated deceleration to {new_deceleration:.2f} m/s² for all motors.")
 
+    
     def monitor_loop(self):
         """
         Continuously reads all motor velocities and publishes them.

@@ -28,6 +28,7 @@ setup(
         'console_scripts': [
             'mecanum_controller = movo_base_motor_control.mecanum_controller:main',
             'omni_wheel_node = movo_base_motor_control.omni_wheel_node:main',
+            'forward_kinematic = movo_base_motor_control.forward_kinematic:main',
         ],
     },
 )

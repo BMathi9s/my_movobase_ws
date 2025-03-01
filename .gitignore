@@ -3,6 +3,10 @@ build/
 install/
 src/build/
 kinova-movo/
+log/
+src/build/
+src/install/
+src/log/
 src/sick_scan_xd/
 src/realsense-ros/
 *.a

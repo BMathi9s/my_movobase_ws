@@ -1,0 +1,7 @@
+ros2 service call /slam_toolbox/save_map slam_toolbox.srv.SaveMap "{map_url: '/home/movo_base/my_map1'}"
+
+
+display /home/movo_base/movobase_ws/src/movo_nav/my_maps/my_map.pgm
+
+
+ros2 run nav2_map_server map_saver_cli -f /home/movo_base/movobase_ws/src/movo_nav/my_maps/my_map

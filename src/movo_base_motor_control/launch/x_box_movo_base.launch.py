@@ -10,7 +10,7 @@ def generate_launch_description():
             'ros2', 'topic', 'pub', '--once',
             '/movo_base/set_acceleration',
             'std_msgs/msg/Float32MultiArray',
-            '{data: [0.3]}'
+            '{data: [0.5]}'
         ],
         output='screen'
     )
@@ -69,12 +69,12 @@ def generate_launch_description():
             output='screen'
         ),
         #  Launch forward_kinematic node
-        Node(
-            package='movo_base_motor_control',
-            executable='forward_kinematic',
-            name='forward_kinematic_node',
-            output='screen'
-        ),
+        # Node(
+        #     package='movo_base_motor_control',
+        #     executable='forward_kinematic',
+        #     name='forward_kinematic_node',
+        #     output='screen'
+        # ),
         # Publish acceleration command once
         set_acceleration,
         # Publish deceleration command once

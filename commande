@@ -18,6 +18,11 @@ ros2 launch movo_nav lidar_slam_launch.py
 
 
 clean build : rm -rf build/ install/ log/
+colcon build --cmake-clean-cache --packages-select tm_imu
+
+running a python script : 
+ros2 run movo_base_motor_control forward_kinematic
+
 
 
 --
