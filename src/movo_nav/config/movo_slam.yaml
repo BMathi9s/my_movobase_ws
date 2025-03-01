@@ -17,5 +17,5 @@ slam_toolbox:
     provide_odom_frame: false
     max_laser_range: 20.0       # Maximum usable laser range, adjust based on your sensor
     min_laser_range: 0.1        # Minimum valid range for the sensor
-    # optimize_interval: 10.0     # How often (in seconds) to run the optimization trade off of performance
+    # optimize_interval: 10.0     # How often (i vnmvn seconds) to run the optimization trade off of performance
     # max_iterations: 20          # Maximum iterations for scan matching
